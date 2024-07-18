@@ -45,6 +45,7 @@ body {
   font-size: large;
   user-select: none;
   margin-left: -40px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .sinmungo {
@@ -57,6 +58,7 @@ body {
   font-size: large;
   user-select: none;
   margin-left: -100px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 #switch {
@@ -125,6 +127,7 @@ checking style / #switch:checked + .switch_label {
   font-weight: bold;
   font-size: 20px;
   margin-left: 50px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 .title-1 {
   background-color: #edf0f5;
@@ -139,6 +142,7 @@ checking style / #switch:checked + .switch_label {
   border-right: 10px;
   margin-left: 30px;
   margin-top: 400px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 .title-2 {
   background-color: #edf0f5;
@@ -153,8 +157,9 @@ checking style / #switch:checked + .switch_label {
   border-right: 10px;
   margin-left: 30px;
   margin-top: 400px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
-.bluebar {
+.bu {
   background-color: #003c82;
   width: 25.17px;
   height: 19px;
@@ -179,9 +184,12 @@ checking style / #switch:checked + .switch_label {
 }
 .hacpok-text {
   font-size: 20px;
-  margin-left: 50px;
-  margin-bottom: 300px;
+  margin-left: 20px;
+  margin-top: -5px;
+  font-weight: 600;
+  font-family: 'Noto Sans KR', sans-serif;
 }
+
 .food {
   background: #fff;
   border-radius: 2px;
@@ -202,6 +210,7 @@ checking style / #switch:checked + .switch_label {
   font-size: 20px;
   margin-left: 50px;
   margin-bottom: 100px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 .food-icon {
   background-color: blue;
@@ -229,6 +238,7 @@ checking style / #switch:checked + .switch_label {
   font-size: 20px;
   margin-left: 50px;
   margin-bottom: 100px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 .gita {
   background: #fff;
@@ -249,6 +259,7 @@ checking style / #switch:checked + .switch_label {
   font-size: 20px;
   margin-left: 50px;
   margin-bottom: 100px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 body {
   background-color: #f4f4f4;
