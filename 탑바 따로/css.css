@@ -1,76 +1,147 @@
-.topbar {
-  background-color: #fff;
-  padding: 10px;
+/* main.css */
+
+/* 기본 스타일 설정 */
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
 }
+
+/* 상단 바 스타일 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* 서브메뉴보다 위에 표시 */
+}
+
+/* 로고와 버튼 스타일 */
+header > span {
+  display: flex;
+  align-items: center;
+}
+
+.mainbutton {
+  width: 100px;
+  height: 50px;
+  margin-left: 85px; /* 왼쪽 여백 */
+}
+
+header img {
+  height: 50px; /* 이미지 높이 조정 */
+}
+
+/* 메뉴 스타일 */
 .main-menu {
-  background-color: #fff;
-  padding: 0; /* 혹은 다른 양수 값 */
-  margin-left: -580px; /* 필요에 따라 조정 */
-  margin-top: 8px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-left: 800px;
 }
 
 .main-menu ul {
-  list-style-type: none;
-  padding: 10px;
+  list-style: none;
+  padding: 0;
   margin: 0;
   display: flex;
 }
 
 .main-menu li {
-  color: rgb(255, 255, 255);
-  padding: 10px 20px;
+  padding: 15px 20px;
   cursor: pointer;
-  position: relative; /* 추가 */
+  position: relative;
 }
 
 .main-menu li:hover {
-  background-color: #e0e0e0; /* 약간의 색상 차이로 가시성 개선 */
+  background-color: #f0f0f0;
 }
 
-.main-menu li:hover .submenu {
-  display: block; /* 메뉴 항목을 호버할 때 서브메뉴를 표시 */
-}
-
+/* 서브메뉴 스타일 */
 .submenu {
   display: none;
   position: absolute;
-  background-color: #fff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
-    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
-    0 16px 16px rgba(0, 0, 0, 0.12);
-  z-index: 3;
-  width: 200px; /* 고정 너비 */
-  box-sizing: border-box; /* 패딩을 포함한 크기 계산 */
-  font-family: 'Noto Sans KR', sans-serif;
-}
-.underbar {
-  z-index: 3;
-  width: 20px;
-  height: 5px;
-  background-color: #e31010;
-  margin-bottom: 100px;
+  top: 75px; /* 상단 바 아래 위치 */
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* 상단 바 위에 표시 */
+  width: 200px;
 }
 
 .submenu ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
-  height: auto; /* 내용에 따라 자동 조정 */
-  display: flex;
-  flex-direction: column;
+  margin: 0;
 }
 
 .submenu ul li {
+  padding: 10px;
   cursor: pointer;
-  padding: 8px; /* 유지하거나 조정 */
-  margin: 0;
   text-align: center;
 }
+.menu-item {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+}
+
 .submenu ul li:hover {
-  background-color: #003c82; /* 호버 시 배경색 변경 */
-  color: #fff; /* 호버 시 텍스트 색상 변경 */
+  background-color: #003c82;
+  color: white;
   border-radius: 20px;
 }
 
-.font-border {
-  font-family: 'Noto Sans KR', sans-serif;
+#switch {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.switch_label {
+  position: absolute;
+  cursor: pointer;
+  display: inline-block;
+  width: 58px;
+  height: 28px;
+  background: #fff;
+  border: 2px solid black;
+  border-radius: 20px;
+  transition: 0.2s;
+  left: 1400px;
+  top: 25px;
+}
+.switch_label:hover {
+  background: white;
+  border: 2px solid black;
+}
+.onf_btn {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: black;
+  transition: 0.2s;
+}
+
+checking style / #switch:checked + .switch_label {
+  background: black;
+  border: 2px solid black;
+}
+
+#switch:checked + .switch_label:hover {
+  background: black;
+}
+
+#switch:checked + .switch_label .onf_btn {
+  left: 34px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #00000020;
 }

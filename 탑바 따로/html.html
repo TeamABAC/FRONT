@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-<link rel="stylesheet" href="css.css">
-</head>
-<body>
-  <div>
-    <!---상단바-->
-    <nav class="main-menu">
-      <ul>
-        <li class="menu-item" data-submenu="submenu1">신문고</li>
-        <li class="menu-item" data-submenu="submenu2">사이트소개</li>
-        <li class="menu-item" data-submenu="submenu3">마이페이지</li>
-      </ul>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상단바와 서브메뉴</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <header>
+      <span>
+        <img src="logo.png" class="mainbutton" onclick="goTomainpage()" />
+      </span>
+      <nav class="main-menu">
+        <ul>
+          <li class="menu-item" data-submenu="submenu1">신문고</li>
+          <li class="menu-item" data-submenu="submenu2">사이트소개</li>
+          <li class="menu-item" data-submenu="submenu3">마이페이지</li>
+        </ul>
+      </nav>
+      <input type="checkbox" id="switch" />
+      <label for="switch" class="switch_label">
+        <span class="onf_btn"></span>
+      </label>
+    </header>
 
-    <div
-      id="submenu1"
-      class="submenu"
-    >
+    <!-- 서브메뉴들 -->
+    <div id="submenu1" class="submenu">
       <ul>
-        <li class="font-border">학교폭력 건의</li>
-        <li class="font-border">급식 건의</li>
-        <li class="font-border">시설 관련 건의</li>
-        <li class="font-border">기타 건의</li>
+        <li class="font-border" onclick="gotohacpok()">학교폭력 건의</li>
+        <li class="font-border" onclick="gotofood()">급식 건의</li>
+        <li class="font-border" onclick="gotosunjeong()">시설 관련 건의</li>
+        <li class="font-border" onclick="gotogita()">기타 건의</li>
       </ul>
     </div>
 
-    <div
-      id="submenu2"
-      class="submenu"
-    >
+    <div id="submenu2" class="submenu">
       <ul>
-        <li class="font-border">사이트 소개</li>
-        <li class="font-border">팀 소개</li>
-        <li class="font-border">사이트 사용 방법</li>
+        <li class="font-border" onclick="gotointroducepage()">사이트 소개</li>
+        <li class="font-border" onclick="gotomypage()">팀 소개</li>
+        <li class="font-border" onclick="gotomypage()">사이트 사용 방법</li>
       </ul>
     </div>
+
+    <div id="submenu3" class="submenu">
+      <ul>
+        <li class="font-border" onclick="gotohacpok()">학교폭력 건의</li>
+        <li class="font-border" onclick="gotofood()">급식 건의</li>
+        <li class="font-border" onclick="gotosunjeong()">시설 관련 건의</li>
+        <li class="font-border" onclick="gotogita()">기타 건의</li>
+      </ul>
+    </div>
+
     <script src="js.js"></script>
-</body>
+  </body>
 </html>
