@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>숨</title>
-    <link class="image" rel="stylesheet" href="메인.css" />
+    <link class="image" rel="stylesheet" href="main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
@@ -21,6 +21,7 @@
           class="mainbutton"
           onclick="goTomainpage()"
         />
+        <img src="./이미지/background.png" alt="" />
       </span>
       <div>
         <!---상단바-->
@@ -32,32 +33,43 @@
           </ul>
         </nav>
 
-        <div id="submenu1" class="submenu">
+        <div
+          id="submenu1"
+          onclick="window.location.href='http://127.0.0.1:5501/메인/메인.html'"
+          class="submenu"
+        >
           <ul>
-            <li>학교폭력 건의</li>
-            <li>급식 건의</li>
-            <li>시설 관련 건의</li>
-            <li>기타 건의</li>
+            <li class="font-border">학교폭력 건의</li>
+            <li class="font-border">급식 건의</li>
+            <li class="font-border">시설 관련 건의</li>
+            <li class="font-border">기타 건의</li>
           </ul>
         </div>
 
-        <div id="submenu2" class="submenu">
+        <div
+          id="submenu2"
+          onclick="window.location.href='http://127.0.0.1:5501/메인/메인.html'"
+          class="submenu"
+        >
           <ul>
-            <li>사이트 소개</li>
-            <li>팀 소개</li>
-            <li>사이트 사용 방법</li>
+            <li class="font-border">사이트 소개</li>
+            <li class="font-border">팀 소개</li>
+            <li class="font-border">사이트 사용 방법</li>
           </ul>
         </div>
 
-        <div id="submenu3" class="submenu">
+        <div
+          id="submenu3"
+          onclick="http://127.0.0.1:5501/메인/메인.html"
+          class="submenu"
+        >
           <ul>
-            <li>학교폭력 건의</li>
-            <li>급식 건의</li>
-            <li>시설 관련 건의</li>
-            <li>기타 건의</li>
+            <li class="font-border">학교폭력 건의</li>
+            <li class="font-border">급식 건의</li>
+            <li class="font-border">시설 관련 건의</li>
+            <li class="font-border">기타 건의</li>
           </ul>
         </div>
-        <span onclick="gotomypage()" class="all">⋮</span>
       </div>
 
       <input type="checkbox" id="switch" />
@@ -87,7 +99,7 @@
           <div>
             <div class="hapok-icon">
               <img
-                src="./이미지/학폭.png"
+                src="./이미지/hackpok.png"
                 style="margin-left: 15px; margin-top: 8px"
                 alt="학폭 이미지"
               />
@@ -100,7 +112,7 @@
     <div onclick="gotofood()" class="food">
       <div class="foodi-con">
         <img
-          src="./이미지/기타.png"
+          src="./이미지/food.png"
           style="margin-left: 15px; margin-top: 8px"
           alt="급식"
         />
@@ -110,7 +122,7 @@
     <div onclick="gotosunjeong()" class="sunjeong">
       <div class="sunjeong-icon">
         <img
-          src="./이미지/설정.png"
+          src="./이미지/sunjeong.png"
           style="margin-left: 15px; margin-top: 8px"
           alt="설정"
         />
@@ -120,7 +132,7 @@
     <div onclick="gotogita()" class="gita">
       <div class="gita-icon">
         <img
-          src="./이미지/기타.png"
+          src="./이미지/gita.png"
           style="margin-left: 15px; margin-top: 8px"
           alt="기타"
         />
@@ -144,5 +156,5 @@
       </div>
     </div>
   </body>
-  <script src="메인.js"></script>
+  <script src="main.js"></script>
 </html>

@@ -1,0 +1,60 @@
+/* 전체 페이지에 대한 스타일 설정 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* 'hi' 클래스가 붙은 div의 스타일 */
+div.hi {
+  background-color: #ffcccb; /* 연한 빨간색 배경 */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* 'hello' 클래스가 붙은 div의 스타일 */
+div.hello {
+  background-color: #ccffcc; /* 연한 초록색 배경 */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+div.mypage {
+  background-color: #f0f6bf; /* 연한 빨간색 배경 */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* 두 개의 <h1> 요소에 대한 공통 스타일 */
+h1 {
+  font-size: 24px;
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+/* 'hi' 클래스가 붙은 div 내부의 <h1> 요소에 대한 스타일 */
+div.hi h1 {
+  color: #333; /* 어두운 회색 글자색 */
+}
+
+/* 'hello' 클래스가 붙은 div 내부의 <h1> 요소에 대한 스타일 */
+div.hello h1 {
+  color: #333; /* 어두운 회색 글자색 */
+}
+
+div.mypage h1 {
+  color: #333; /* 어두운 회색 글자색 */
+}
+/* 마우스가 <h1> 요소 위에 있을 때의 스타일 */
+div.hi h1:hover,
+div.mypage h1:hover,
+div.hello h1:hover {
+  color: #007bff; /* 파란색 글자색으로 변경 */
+  font-size: 28px; /* 폰트 사이즈 증가 */
+}

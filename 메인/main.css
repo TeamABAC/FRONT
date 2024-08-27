@@ -1,5 +1,4 @@
 header {
-  width: 1535px;
   height: 75px;
   text-align: start;
   display: flex;
@@ -7,15 +6,17 @@ header {
   justify-content: flex-start;
   background-color: white;
   margin-bottom: 0px;
+  width: 100%;
 }
 
 .main {
   margin: 0px;
-  width: 1550px;
   height: 400px;
   background-image: url(./이미지/배경.png);
   position: absolute;
   top: 75px;
+  width: 100%; /* 화면 너비에 맞게 조정 */
+  background-size: cover; /* 배경 이미지가 컨테이너에 맞도록 설정 */
 }
 
 .footer {
@@ -27,13 +28,14 @@ header {
   height: 50px;
   border-bottom-right-radius: 6px;
   margin-left: 100px;
-  margin-top: -15px;
+  margin-top: -13px;
 }
 header > span:first-of-type {
   margin-top: 30px;
 }
 body {
-  background-color: rgb(244, 244, 244);
+  background-color: #f4f4f4;
+  font-family: 'Noto Sans KR', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -68,13 +70,7 @@ body {
   margin-left: 938.5px; /* 조정된 값 */
   font-family: 'Noto Sans KR', sans-serif;
 }
-.all {
-  font-size: xx-large;
-  margin-top: 10px;
-  margin-left: auto; /* 왼쪽 여백 자동으로 설정하여 오른쪽으로 이동 */
-  margin-right: 20px; /* 오른쪽 여백 설정 (필요에 따라 조정) */
-  color: #444;
-}
+
 #switch {
   position: absolute;
   appearance: none;
@@ -97,6 +93,7 @@ body {
 }
 .switch_label:hover {
   background: white;
+  border: 2px solid black;
 }
 .onf_btn {
   position: absolute;
@@ -276,9 +273,7 @@ checking style / #switch:checked + .switch_label {
   font-weight: 600;
   font-family: 'Noto Sans KR', sans-serif;
 }
-body {
-  background-color: #f4f4f4;
-}
+
 .black {
   width: 1600px;
   height: 110px;
@@ -305,11 +300,6 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
 }
 /* top */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
 
 .topbar {
   background-color: #fff;
@@ -317,14 +307,14 @@ body {
 }
 .main-menu {
   background-color: #fff;
-  padding: 10px;
-  margin-left: 800px; /* 왼쪽 여백 조정 (필요에 따라 조정) */
-  margin-top: 10px;
+  padding: -4px;
+  margin-left: -580px; /* 왼쪽 여백 조정 (필요에 따라 조정) */
+  margin-top: 8px;
 }
 
 .main-menu ul {
   list-style-type: none;
-  padding: 0;
+  padding: 10px;
   margin: 0;
   display: flex;
 }
@@ -348,11 +338,20 @@ body {
   display: none;
   position: absolute;
   background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
   z-index: 3;
   width: 200px; /* 고정 너비 */
   box-sizing: border-box; /* 패딩을 포함한 크기 계산 */
   font-family: 'Noto Sans KR', sans-serif;
+}
+.underbar {
+  z-index: 3;
+  width: 20px;
+  height: 5px;
+  background-color: #e31010;
+  margin-bottom: 100px;
 }
 
 .submenu ul {
@@ -366,10 +365,17 @@ body {
 .submenu ul li {
   padding: 20px;
   cursor: pointer;
+  padding: 8px; /* 기존의 20px에서 10px으로 줄여 간격을 좁힙니다 */
+  margin: 0; /* 필요하다면 margin을 줄이거나 제거합니다 */
   text-align: center;
 }
 
 .submenu ul li:hover {
   background-color: #003c82; /* 호버 시 배경색 변경 */
   color: #fff; /* 호버 시 텍스트 색상 변경 */
+  border-radius: 20px;
+}
+
+.font-border {
+  font-family: 'Noto Sans KR', sans-serif;
 }
