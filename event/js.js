@@ -47,3 +47,5 @@ title2.addEventListener('mouseleave', handleMouseLeave2);
 // 세 번째 <h1> 요소에 이벤트 리스너 추가
 title3.addEventListener('mouseenter', handleMouseEnter3);
 title3.addEventListener('mouseleave', handleMouseLeave3);
+
+window.location.href='https://www.youtube.com/'
