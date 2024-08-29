@@ -1,4 +1,3 @@
-// js.js
 document.addEventListener('DOMContentLoaded', function () {
   const menuItems = document.querySelectorAll('.menu-item');
   const submenus = document.querySelectorAll('.submenu');

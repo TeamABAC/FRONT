@@ -6,6 +6,11 @@
     <title>상단바와 서브메뉴</title>
     <link rel="stylesheet" href="css.css" />
   </head>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+
   <body>
     <header>
       <span>
@@ -18,10 +23,9 @@
           <li class="menu-item" data-submenu="submenu3">마이페이지</li>
         </ul>
       </nav>
-      <input type="checkbox" id="switch" />
-      <label for="switch" class="switch_label">
-        <span class="onf_btn"></span>
-      </label>
+      <div class="login">
+        <div class="logintext">로그인</div>
+      </div>
     </header>
 
     <!-- 서브메뉴들 -->
@@ -44,10 +48,9 @@
 
     <div id="submenu3" class="submenu">
       <ul>
-        <li class="font-border" onclick="gotohacpok()">학교폭력 건의</li>
-        <li class="font-border" onclick="gotofood()">급식 건의</li>
-        <li class="font-border" onclick="gotosunjeong()">시설 관련 건의</li>
-        <li class="font-border" onclick="gotogita()">기타 건의</li>
+        <li class="font-border" onclick="gotohacpok()">나의 정보</li>
+        <li class="font-border" onclick="gotofood()">개인정보 수정</li>
+        <li class="font-border" onclick="gotosunjeong()">나의 건의 목록</li>
       </ul>
     </div>
 

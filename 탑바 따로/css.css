@@ -1,5 +1,3 @@
-/* main.css */
-
 /* 기본 스타일 설정 */
 body {
   margin: 0;
@@ -52,7 +50,7 @@ header img {
 }
 
 .main-menu li {
-  padding: 15px 20px;
+  padding: 10px 20px;
   cursor: pointer;
   position: relative;
 }
@@ -65,29 +63,37 @@ header img {
 .submenu {
   display: none;
   position: absolute;
-  top: 75px; /* 상단 바 아래 위치 */
-  left: 0;
+
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* 상단 바 위에 표시 */
   width: 200px;
-  height: 180px;
+  height: auto;
+  padding: 0; /* 내부 여백 제거 */
+  z-index: 1000;
+  width: 200px; /* 고정 너비 */
+  box-sizing: border-box; /* 패딩을 포함한 크기 계산 */
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .submenu ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
-  margin: 0;
+  height: auto; /* 내용에 따라 자동 조정 */
+  display: flex;
+  flex-direction: column;
 }
 
+.font-border {
+}
 .submenu ul li {
-  padding: 10px;
+  padding: 20px;
   cursor: pointer;
+  padding: 8px; /* 기존의 20px에서 10px으로 줄여 간격을 좁힙니다 */
+  margin: 0; /* 필요하다면 margin을 줄이거나 제거합니다 */
   text-align: center;
 }
 .menu-item {
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 500;
+  font-size: 17px;
 }
 
 .submenu ul li:hover {
@@ -96,53 +102,22 @@ header img {
   border-radius: 20px;
 }
 
-#switch {
-  position: absolute;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+* {
+  font-family: 'Noto Sans KR', sans-serif;
 }
-
-.switch_label {
-  position: absolute;
-  cursor: pointer;
-  display: inline-block;
-  width: 58px;
-  height: 28px;
-  background: #fff;
-  border: 2px solid black;
-  border-radius: 20px;
-  transition: 0.2s;
-  left: 1400px;
-  top: 25px;
+.login {
+  background-color: #003c82;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: 30px;
 }
-.switch_label:hover {
-  background: white;
-  border: 2px solid black;
+.logintext {
+  color: #fff;
+  margin-top: 5px;
+  margin-left: 5px;
+  text-align: center;
 }
-.onf_btn {
-  position: absolute;
-  top: 4px;
-  left: 3px;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
-  background: black;
-  transition: 0.2s;
-}
-
-checking style / #switch:checked + .switch_label {
-  background: black;
-  border: 2px solid black;
-}
-
-#switch:checked + .switch_label:hover {
-  background: black;
-}
-
-#switch:checked + .switch_label .onf_btn {
-  left: 34px;
-  background: #fff;
-  box-shadow: 1px 2px 3px #00000020;
+.submenu1 {
 }
