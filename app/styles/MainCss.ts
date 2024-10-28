@@ -81,10 +81,13 @@ export const MainMenu = styled.div`
   display: flex;
   position: absolute;
   gap: 80px;
+
   width: 100%
   height: 144px;
+
   top: 600px;
   left: 270px;
+
   filter: drop-shadow(0px 5.27778px 7.38889px #99A1B5);
   flex: none;
   order: 0;
@@ -94,6 +97,7 @@ export const MainMenu = styled.div`
 export const MenuIconBlue = styled.div`
   width: 50px;
   height: 50px;
+
   margin-top: 20px;
   margin-left: 20px;
   background: #003c82;
@@ -113,6 +117,9 @@ export const MenuIcon = styled.img`
   -moz-user-drag: none;
   -o-user-drag: none;
   user-drag: none;
+
+  cursor: pointer;
+
 `;
 
 export const MenuText = styled.span`

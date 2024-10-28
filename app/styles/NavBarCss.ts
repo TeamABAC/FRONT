@@ -15,6 +15,8 @@ export const HompageIcon = styled.img`
   -moz-user-drag: none;
   -o-user-drag: none;
   user-drag: none;
+
+  cursor: pointer;
 `;
 
 export const NavTmfdiv = styled.div`
@@ -32,12 +34,13 @@ export const NavTmfdiv = styled.div`
 export const NavText = styled.div`
   width: 100px;
 
-  left: 1040px;
+  left: 1000px;
   top: 25px;
 
   display: flex;
   position: absolute;
-  gqp: 20px;
+  gap: 30px;
+
 `;
 
 export const NavTexts = styled.span`
@@ -58,11 +61,14 @@ export const NavTexts = styled.span`
   flex: none;
   order: 0;
   flex-grow: 0;
+
+  cursor: pointer;
+
 `;
 
-export const NavLogin = styled.div`
-  width: 88px;
-  height: 32px;
+export const NavLogOut = styled.div`
+  width: 96px;
+  height: 38px;
 
   left: 1400px;
   top: 19px;
@@ -71,18 +77,15 @@ export const NavLogin = styled.div`
 
   background: #003c82;
   border-radius: 11.0833px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
 `;
 
-export const NavLoginText = styled.span`
-  width: 50px;
-  height: 22px;
-
-  left: 18px;
-  top: 6px;
-
-  position: absolute;
-  text-align: center;
-
+export const NavLogOutText = styled.span`
   font-fmaily: 'Pretendard';
   font-style: normal;
   font-weight: 700;
