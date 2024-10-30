@@ -17,11 +17,14 @@ export const HompageIcon = styled.img`
   user-drag: none;
 
   cursor: pointer;
+
 `;
 
 export const NavTmfdiv = styled.div`
   weight: 1520px;
   height: 70px;
+  
+  poosition: relative;
 
   background-color: white;
 
@@ -29,6 +32,9 @@ export const NavTmfdiv = styled.div`
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  display: flex;
+  
 `;
 
 export const NavText = styled.div`
@@ -44,11 +50,11 @@ export const NavText = styled.div`
 `;
 
 export const NavTexts = styled.span`
+  float: right;
+
   width: 100px;
   height: 22px;
   top: 20px;
-
-  text-align: center;
 
   font-fmaily: 'Pretendard';
   font-style: normal;
@@ -67,13 +73,13 @@ export const NavTexts = styled.span`
 `;
 
 export const NavLogOut = styled.div`
+  float: right;
+
   width: 96px;
   height: 38px;
 
   left: 1400px;
   top: 19px;
-
-  position: absolute;
 
   background: #003c82;
   border-radius: 11.0833px;
