@@ -229,7 +229,6 @@ export const Checkbutton = styled.div`
   position: absolute;
   width: 237px;
   height: 56px;
-  left: 600px; /* 수정: 600x -> 600px */
   top: 1820px;
   background: #003C82;
   border-radius: 9.5px;

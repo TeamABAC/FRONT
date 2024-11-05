@@ -19,15 +19,13 @@ const ImageUpload = () => {
 
   return (
     <>
-      <S.attachImageDiv>
-        
+         
         {previewUrl && (
-          <div>
+          <S.ImageDiv>
             <S.attachImage src={previewUrl}/>
-          </div>
+          </S.ImageDiv>
       )}
       <S.attachInput type="file" accept="image/*" onChange={handleImageChange} />
-      </S.attachImageDiv>
     </>
   );
 };

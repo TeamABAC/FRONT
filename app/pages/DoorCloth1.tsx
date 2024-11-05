@@ -53,7 +53,7 @@ function DoorCloth1() {
           </S.AgreeContentDiv>
 
           <S.AgreeCheckDiv Agreetop="620px" Agreeleft='360px'>
-            <RadioCheck radioLabelText='동의' disradioLabelText='비동의'/>
+            <RadioCheck radioLabelText='동의' disradioLabelText='비동의' name="agreement"/>
           </S.AgreeCheckDiv>
 
 
@@ -62,7 +62,7 @@ function DoorCloth1() {
          <S.TextSpan>건의 공개 여부</S.TextSpan>
 
          <S.AgreeCheckDiv Agreetop="720px" Agreeleft='140px'>
-          <RadioCheck radioLabelText='공개' disradioLabelText='비공개'/>
+          <RadioCheck radioLabelText='공개' disradioLabelText='비공개' name='visibility'/>
          </S.AgreeCheckDiv>
 
          <S.Checkbutton onClick={goToDoor2Page}>
