@@ -24,6 +24,10 @@ export const MainBodyDiv = styled.div`
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const NoticeTmfDiv = styled.div`
@@ -54,7 +58,6 @@ export const NoticeText = styled.span`
 `;
 
 export const MainBodyBlueStick = styled.span`
-  position: absolute;
   width: 478.17px;
   height: 19px;
   left: 510.36px;
@@ -82,11 +85,10 @@ export const MainMenu = styled.div`
   position: absolute;
   gap: 80px;
 
-  width: 100%
+  width: 1300px;
   height: 144px;
 
   top: 600px;
-  left: 270px;
 
   filter: drop-shadow(0px 5.27778px 7.38889px #99A1B5);
   flex: none;

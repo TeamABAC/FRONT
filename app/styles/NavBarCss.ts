@@ -33,19 +33,20 @@ export const NavTmfdiv = styled.div`
   -ms-user-select: none;
   user-select: none;
 
-  display: flex;
+  display: inline-blok;
   
 `;
 
 export const NavText = styled.div`
   width: 100px;
-
-  left: 1000px;
+  
+  right: 500px;
   top: 25px;
 
   display: flex;
-  position: absolute;
   gap: 30px;
+  float: right;
+  position:absolute;
 
 `;
 
@@ -54,7 +55,6 @@ export const NavTexts = styled.span`
 
   width: 100px;
   height: 22px;
-  top: 20px;
 
   font-fmaily: 'Pretendard';
   font-style: normal;
@@ -78,8 +78,9 @@ export const NavLogOut = styled.div`
   width: 96px;
   height: 38px;
 
-  left: 1400px;
-  top: 19px;
+  position: absolute;
+  right: 70px;
+  top: 15px;
 
   background: #003c82;
   border-radius: 11.0833px;

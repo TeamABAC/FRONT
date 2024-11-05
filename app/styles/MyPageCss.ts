@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MyPageBodyDiv = styled.div`
   width: 100%;
-  height: 700px;
+  height: 900px;
   background: linear-gradient(180deg, #6092f2 0%, #295f9f 100%);
 `;
 
