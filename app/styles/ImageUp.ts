@@ -1,25 +1,32 @@
 // styles/ImageUp.js
 import styled from "styled-components";
 
-export const ImageDiv = styled.div`
+export const ImageDiv = styled.div `
   position: absolute;
+  position: relative;
+  width: 900px;
+  height: 40px;
   top: 1500px;
-  width:900px;
-  height:40px;
-  max-width: 300px; /* 최대 너비 설정 */
-  max-height: 300px; /* 최대 높이 설정 */
-  overflow: scroll;
-  background-color: black;
-  border: 0.5px solid #000000;
-  cursor: pointer; /* 클릭 가능함을 나타내는 커서 */
-`;
 
-export const attachImage = styled.img`
-  width: 100%; /* div의 너비에 맞춤 */
-  height: auto; /* 비율 유지 */
-`;
+  display:flex;
+  justify-content: center;
+`
 
-export const attachInput = styled.input`
-  position: absolute;
-  top: 50px;
-`;
+
+export const FileInput = styled.input`
+  
+  /* 파일 버튼을 위한 스타일링 */
+  & + label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #005bb5;
+    }
+  }
+`

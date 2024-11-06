@@ -129,9 +129,10 @@ export const DivideBlueText = styled.span`
 export const CheckBoxDiv = styled.div`
   box-sizing: border-box;
   position: relative; /* 수정: display: relative; -> position: relative; */
-  width: 898px;
+  width: 900px;
   height: 170px;
   top: 500px;
+  left: 74px;
   background: #EEF3F9;
   border: 1.8px solid #C7D2E1;
 `;
@@ -160,7 +161,7 @@ export const RadioCheckDiv = styled.div`
   gap: 60px;
 `;
 
-export const GrayText = styled.span` /* 수정: GrayTExt -> GrayText */
+export const GrayText = styled.span`
   position: absolute;
   top: 100px;
   left: 40px;
@@ -173,7 +174,7 @@ export const GrayText = styled.span` /* 수정: GrayTExt -> GrayText */
 `;
 
 interface InputTextProps {
-  $top: string; // CSS 단위를 포함하는 문자열로 사용
+  $top: string; 
 }
 
 export const InputText = styled.span<InputTextProps>`
