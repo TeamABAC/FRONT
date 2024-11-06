@@ -25,7 +25,7 @@ export const FileInput = styled.input`
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #002b8a; /* 호버 색상 변경 */
+      background-color: #002b8a;
     }
   }
 `;
