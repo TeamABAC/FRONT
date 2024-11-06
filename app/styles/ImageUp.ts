@@ -1,32 +1,38 @@
-// styles/ImageUp.js
 import styled from "styled-components";
 
-export const ImageDiv = styled.div `
+export const ImageDiv = styled.div`
   position: absolute;
-  position: relative;
   width: 900px;
-  height: 40px;
+  height: 50px;
   top: 1500px;
 
-  display:flex;
-  justify-content: center;
-`
-
+  background-color: black;
+`;
 
 export const FileInput = styled.input`
-  
-  /* 파일 버튼을 위한 스타일링 */
+  display: none;
+  position: absolute;
+  left: 20px;
+  heght: 40px;
+
   & + label {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0070f3;
+    background-color: #003CB2;
     color: white;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #005bb5;
+      background-color: #002b8a; /* 호버 색상 변경 */
     }
   }
-`
+`;
+
+export const FileInputLabel = styled.label`
+ font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+` 

@@ -6,9 +6,10 @@ import * as S from '../styles/ImageUp';
 const ImageUpload = () => {
   return (
     <>
-    <S.ImageDiv>
-      <S.FileInput type='file' />
-    </S.ImageDiv>
+      <S.ImageDiv>
+        <S.FileInput type='file' id='file-upload' accept='image/*' />
+        <S.FileInputLabel htmlFor='file-upload'>파일 선택</S.FileInputLabel>
+      </S.ImageDiv>
     </>
   );
 };

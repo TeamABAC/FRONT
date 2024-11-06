@@ -131,7 +131,6 @@ export const CheckBoxDiv = styled.div`
   width: 900px;
   height: 170px;
   top: 500px;
-  left: 74px;
   background: #EEF3F9;
   border: 1.8px solid #C7D2E1;
 `;
@@ -239,7 +238,7 @@ export const Checkbutton = styled.div`
 `;
 
 export const CheckText = styled.span`
-  font-family: 'Wanted Sans';
+  font-family: 'Pretendard';
   font-style: normal;
   font-weight: 600;
   font-size: 28.5px;
@@ -248,3 +247,4 @@ export const CheckText = styled.span`
   color: #FFFFFF;
   cursor: pointer;
 `;
+
