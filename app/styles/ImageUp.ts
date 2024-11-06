@@ -9,6 +9,10 @@ export const ImageDiv = styled.div`
   background-color: #F4F4F4;
   display: flex;
   align-items: center; 
+
+  box-sizing: border-box;
+  border: 0.5px solid #000000;
+  border-radius: 5px 0 0 5px; /* 왼쪽 위와 왼쪽 아래만 둥글게 설정 */
 `;
 
 export const FileInput = styled.input`
@@ -26,7 +30,7 @@ export const FileInputLabel = styled.label`
   padding: 10px 20px;
   background-color: #003CB2;
   color: white;
-  border-radius: 5px;
+  border-radius: 5px; /* 레이블의 모든 모서리를 둥글게 설정 */
   transition: background-color 0.3s;
 
   &:hover {
