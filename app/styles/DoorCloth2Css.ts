@@ -13,13 +13,12 @@ export const WhiteDiv = styled.div`
   width: 1048px;
   height: 1900px;
   margin-top: 90px;
-  
   position: relative;
   box-shadow: 0px 3.16667px 7.91667px rgba(0, 0, 0, 0.25);
   border-radius: 15.8333px 15.8333px 0px 0px;
   display: flex;
   justify-content: center;
-  text-align: center; /* 수정: text-aligns -> text-align */
+  text-align: center;
   user-select: text;
 `;
 
@@ -38,7 +37,7 @@ export const TendinousText = styled.span`
 `;
 
 interface DivideLineProps {
-  top: string; // CSS 단위를 포함하는 문자열로 사용
+  top: string;
 }
 
 export const DivideLine = styled.div<DivideLineProps>`
@@ -128,7 +127,7 @@ export const DivideBlueText = styled.span`
 
 export const CheckBoxDiv = styled.div`
   box-sizing: border-box;
-  position: relative; /* 수정: display: relative; -> position: relative; */
+  position: relative;
   width: 900px;
   height: 170px;
   top: 500px;
