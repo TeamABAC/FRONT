@@ -4,12 +4,16 @@ import { useRouter } from 'next/navigation';
 import React from 'react';
 import NavBar from '../components/NavBar';
 import * as S from '../styles/DoorCloth3Css';
+
 function Endgunhe() {
   const router = useRouter();
-
+  
+  function goToMainPage() {
+    router.push('/Main');
+  }
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar />
 
       <S.BackgroundColor>
         <S.WhiteBackground>
@@ -35,6 +39,10 @@ function Endgunhe() {
             작성 완료! 2~3일 이내에 메일이 갈 꺼라굿~!
           </S.CongraturationMessage>
           <S.RacunImage src={'/RacunHappy.png'} />
+
+          <S.Mainbutton>
+            <S.MainText onClick={goToMainPage}>메인으로 가기</S.MainText>
+          </S.Mainbutton>
         </S.WhiteBackground>
       </S.BackgroundColor>
     </>

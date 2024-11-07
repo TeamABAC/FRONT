@@ -6,7 +6,6 @@ import NavBar from '../components/NavBar';
 import ImageUp from '../components/ImageUp';
 import RadioCheck from '../components/RadioCheck';
 import * as S from '../styles/DoorCloth2Css';
-import DoorCloth3 from '../DoorCloth3/page';
 
 function DoorCloth2() {
   const router = useRouter();

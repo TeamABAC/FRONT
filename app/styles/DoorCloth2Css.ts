@@ -40,11 +40,11 @@ interface DivideLineProps {
   top: string;
 }
 
-export const DivideLine = styled.div<DivideLineProps>`
+export const DivideLine = styled.div<{ top: string }>`
   width: 900px;
   height: 1px;
   position: absolute;
-  top: ${({ top }) => top};
+  top: ${({ top }) => top}; // top prop을 사용
   background-color: black;
 `;
 
@@ -175,10 +175,10 @@ interface InputTextProps {
   $top: string; 
 }
 
-export const InputText = styled.span<InputTextProps>`
+export const InputText = styled.span<{ $top: string }>`
   position: absolute;
   left: 80px;
-  top: ${({ $top }) => $top};
+  top: ${({ $top }) => $top}; // $top을 사용
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 700;

@@ -21,32 +21,35 @@ function Main() {
         <S.MainBodyBlueStick />
 
         <S.MainMenu>
-          <S.MainMenus>
 
+          <S.MainMenus>
             <S.MenuIconBlue>
               <S.MenuIcon src={'/icon1.png'} alt="시발븅신새끼" />
             </S.MenuIconBlue>
-
             <S.MenuText>건의 작성</S.MenuText>
           </S.MainMenus>
 
           <S.MainMenus>
-
             <S.MenuIconBlue>
               <S.MenuIcon src={'/icon3.png'} alt="시발 좆같네" />
             </S.MenuIconBlue>
-
             <S.MenuText>건의 게시판</S.MenuText>
           </S.MainMenus>
 
           <S.MainMenus>
-
             <S.MenuIconBlue>
               <S.MenuIcon src={'/icon2.png'} alt="시발 진짜 왜그래" />
             </S.MenuIconBlue>
-
             <S.MenuText>결과 조회</S.MenuText>
           </S.MainMenus>
+
+          <S.MainMenus>
+            <S.MenuIconBlue>
+              <S.MenuIcon src={'/icon2.png'} alt='인생 살기 힘들다' />
+            </S.MenuIconBlue>
+            <S.MenuText>마이페이지</S.MenuText>
+          </S.MainMenus>
+
         </S.MainMenu>
       </S.MainBodyDiv>
     </>

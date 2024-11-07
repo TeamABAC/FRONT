@@ -28,7 +28,7 @@ export const FileInputLabel = styled.label`
   font-size: 20px;
   cursor: pointer;
   padding: 10px 20px;
-  background-color: #003CB2;
+  background-color: #002b8a;
   color: white;
   border-radius: 5px; /* 레이블의 모든 모서리를 둥글게 설정 */
   transition: background-color 0.3s;
@@ -43,3 +43,7 @@ export const FileName = styled.span`
   color: black;
   font-size: 16px;
 `;
+
+export const ReallyCheck = styled.input`
+  width: auto;
+`

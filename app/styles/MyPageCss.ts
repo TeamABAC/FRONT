@@ -6,7 +6,7 @@ export const MyPageBodyDiv = styled.div`
   background: linear-gradient(180deg, #6092f2 0%, #295f9f 100%);
 `;
 
-export const MyPageTextDiv = styled.div<{ isSelected: boolean }>`
+export const MyPageTextDiv = styled.div`
   box-sizing: border-box;
   position: absolute;
 
@@ -15,8 +15,8 @@ export const MyPageTextDiv = styled.div<{ isSelected: boolean }>`
   left: 98px;
   top: 152px;
   
-  background: ${(props) => (props.isSelected ? "#ffffff" : "")};
-  border: ${(props) => (props.isSelected ? "1px solid #a9bad1" : "")};
+  background: #ffffff;
+  border: 1px solid #a9bad1;
   border-radius: 16px;
   
   display: flex;
@@ -27,54 +27,15 @@ export const MyPageTextDiv = styled.div<{ isSelected: boolean }>`
   user-select: none; /* 드래그 방지 */
 `;
 
-export const MyPageText = styled.span<{ isSelected: boolean }>`
+export const MyPageText = styled.span`
 
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
   line-height: 70px;
-
-  color: ${(props) => (props.isSelected ? "#4d80d5" : "white")};
+  color: #4D80D5;
   user-select: none;
 `;
 
-export const ListDiv = styled.div`
-  box-sizing: border-box;
-  position: absolute;
 
-  width: 184px;
-  height: 160px;
-  left: 125px;
-  top: 267px;
-
-  border: 2px solid #ffffff;
-  border-radius: 20px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  gap: 30px;
-  flex-direction: column;
-`;
-
-export const ListText = styled.span<{ isSelected: boolean }>`
-  width: 184px;
-  height: 40px;
-
-  font-family: 'Pretendard';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 25px;
-
-  color: ${(props) => (props.isSelected ? "#295f9f" : "#ffffff")};
-  background-color: ${(props) => (props.isSelected ? "#ffffff" : "transparent")}; 
-  
-  border-radius: 10px;
-  cursor: pointer;
-  user-select: none;
-
-  text-align: center;
-`;

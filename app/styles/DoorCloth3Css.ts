@@ -2,17 +2,15 @@ import styled from 'styled-components';
 
 export const BackgroundColor = styled.div`
   width: 100%;
-  height: 1000px;
-
+  height: 1150px;
   background-color: #f1f1f1;
-
   display: flex;
   justify-content: center;
 `;
 
 export const WhiteBackground = styled.div`
   width: 1040px;
-  height: 900px;
+  height: 1050px;
   background-color: white;
   margin-top: 90px;
 
@@ -138,4 +136,28 @@ export const RacunImage = styled.img`
   height: 300px;
   position: absolute;
   top: 700px;
+`;
+
+export const Mainbutton = styled.div`
+  position: absolute;
+  width: 237px;
+  height: 56px;
+  top: 1120px;
+  background: #003C82;
+  border-radius: 9.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+`;
+
+export const MainText = styled.span`
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28.5px;
+  line-height: 34px;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
 `;

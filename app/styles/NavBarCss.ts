@@ -40,7 +40,7 @@ export const NavTmfdiv = styled.div`
 export const NavText = styled.div`
   width: 100px;
   
-  right: 500px;
+  right: 600px;
   top: 25px;
 
   display: flex;

@@ -113,12 +113,12 @@ export const DivideBlueLine = styled.div`
   top: 400px;
   display: flex;
   align-items: center;
+  justy-content: center;
   background: #003c82;
   border-radius: 15.8333px 15.8333px 0px 0px;
 `;
 
 export const DivideBlueText = styled.span`
-  margin-bottom: 10px;
   margin-left: 16px;
   font-family: 'Pretendard';
   font-style: normal;
@@ -155,6 +155,8 @@ export const AgreeContentDiv = styled.div`
   background: #ffffff;
   border: 1px solid #444444;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
 `;
 
 export const AgreeContentText = styled.span`
