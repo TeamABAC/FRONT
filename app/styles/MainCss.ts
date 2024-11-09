@@ -99,12 +99,11 @@ export const MainMenu = styled.div`
 export const MenuIconBlue = styled.div`
   width: 50px;
   height: 50px;
-
   margin-top: 20px;
   margin-left: 20px;
   background: #003c82;
   border-radius: 16px;
-
+  cursor:pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,13 +112,11 @@ export const MenuIconBlue = styled.div`
 export const MenuIcon = styled.img`
   width: 20px;
   height: 20px;
-
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
   user-drag: none;
-
   cursor: pointer;
 
 `;
@@ -127,10 +124,8 @@ export const MenuIcon = styled.img`
 export const MenuText = styled.span`
   width: 90px;
   height: 24px;
-
   margin-left: -44px;
   margin-top: 78px;
-
   font-fmaily: 'Pretendard';
   font-style: normal;
   font-weight: 1000;
@@ -138,4 +133,5 @@ export const MenuText = styled.span`
   line-height: 24px;
   letter-spacing: -0.005em;
   color: #444444;
+  cursor:pointer;
 `;

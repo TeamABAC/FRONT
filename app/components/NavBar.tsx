@@ -19,6 +19,10 @@ function NavBar() {
     router.push('/DoorCloth1');
   }
 
+  function goToEveryData() {
+    router.push('/EveryData');
+  }
+
   return (
     <>
       <S.NavTmfdiv>
@@ -26,7 +30,7 @@ function NavBar() {
 
         <S.NavText>
           <S.NavTexts onClick={goToDoor1Page}>건의 작성</S.NavTexts>
-          <S.NavTexts>결과 조회 </S.NavTexts>
+          <S.NavTexts onClick={goToEveryData}>결과 조회 </S.NavTexts>
           <S.NavTexts>건의 게시판</S.NavTexts>
           <S.NavTexts onClick={goToMyPage}>마이페이지</S.NavTexts>  
         </S.NavText>

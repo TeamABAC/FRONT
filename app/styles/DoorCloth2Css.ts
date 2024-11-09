@@ -5,13 +5,13 @@ export const BackgroundColor = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 1990px;
+  height: 1890px;
 `;
 
 export const WhiteDiv = styled.div`
   background-color: white;
   width: 1048px;
-  height: 1900px;
+  height: 1800px;
   margin-top: 90px;
   position: relative;
   box-shadow: 0px 3.16667px 7.91667px rgba(0, 0, 0, 0.25);
@@ -228,7 +228,7 @@ export const Checkbutton = styled.div`
   position: absolute;
   width: 237px;
   height: 56px;
-  top: 1820px;
+  top: 1680px;
   background: #003C82;
   border-radius: 9.5px;
   display: flex;

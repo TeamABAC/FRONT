@@ -1,17 +1,25 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import NavBar from '../components/NavBar';
 import RadioCheck from '../components/RadioCheck';
 import * as S from '../styles/DoorCloth1Css';
-import goToDoor2Page from '../DoorCloth2/page';
 
 function DoorCloth1() {
   const router = useRouter();
+  const [isAgreed, setIsAgreed] = useState(false); // 동의 여부 상태 관리
+
+  function handleAgreementChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setIsAgreed(e.target.value === '동의'); // '동의'가 선택되면 true
+  }
 
   function goToDoor2Page() {
-    router.push('/DoorCloth2');
+    if (isAgreed) {
+      router.push('/DoorCloth2');
+    } else {
+      alert('동의해야 다음 페이지로 넘어갈 수 있습니다.'); // 동의하지 않았을 경우 경고
+    }
   }
 
   return (
@@ -53,21 +61,30 @@ function DoorCloth1() {
           </S.AgreeContentDiv>
 
           <S.AgreeCheckDiv Agreetop="620px" Agreeleft='360px'>
-            <RadioCheck radioLabelText='동의' disradioLabelText='비동의' name="agreement"/>
+            <RadioCheck 
+              radioLabelText='동의' 
+              disradioLabelText='비동의' 
+              name="agreement"
+              onChange={handleAgreementChange} // 체크박스 상태 변경 핸들러
+            />
           </S.AgreeCheckDiv>
 
+          <S.DivideLine top="700px" />
 
-         <S.DivideLine top="700px" />
+          <S.TextSpan>건의 공개 여부</S.TextSpan>
 
-         <S.TextSpan>건의 공개 여부</S.TextSpan>
+          <S.AgreeCheckDiv Agreetop="720px" Agreeleft='140px'>
+            <RadioCheck 
+              radioLabelText='공개' 
+              disradioLabelText='비공개' 
+              name='visibility'
+              onChange={() => {}} // 필요한 경우에 맞게 수정
+            />
+          </S.AgreeCheckDiv>
 
-         <S.AgreeCheckDiv Agreetop="720px" Agreeleft='140px'>
-          <RadioCheck radioLabelText='공개' disradioLabelText='비공개' name='visibility'/>
-         </S.AgreeCheckDiv>
-
-         <S.Checkbutton onClick={goToDoor2Page}>
-          <S.CheckText onClick={goToDoor2Page}>확인</S.CheckText>
-         </S.Checkbutton>
+          <S.Checkbutton onClick={goToDoor2Page}>
+            <S.CheckText>확인</S.CheckText>
+          </S.Checkbutton>
         </S.WhiteDiv>
       </S.BackgroundColor>
     </>
