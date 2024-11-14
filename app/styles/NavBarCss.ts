@@ -52,24 +52,18 @@ export const NavText = styled.div`
 
 export const NavTexts = styled.span`
   float: right;
-
   width: 100px;
   height: 22px;
-
   font-fmaily: 'Pretendard';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 15px;
   line-height: 22px;
-
   color: #444444;
-
   flex: none;
   order: 0;
   flex-grow: 0;
-
   cursor: pointer;
-
 `;
 
 export const NavLogOut = styled.div`
