@@ -29,21 +29,45 @@ export const MainBodyDiv = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
 export const plusNoticebutton = styled.div`
-width: 50px;
-height: 50px;
-margin: 20px 20px 20px 0px;
-background-color: #003C82;
-border-radius: 16px;
-display: flex;
-justify-content: center;
-align-items: center;
-`
+  width: 40px;
+  height: 40px;
+  margin: 20px 20px 20px 0px;
+  background-color: #003C82;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`;
 
 export const plusEmote = styled.img`
-  width:20px;
-  height: 20px;
-`
+  width: 15px;
+  height: 15px;
+`;
+
+export const Overlay = styled.div`
+  position: fixed; /* 화면에 고정 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 검정색 */
+  z-index: 5; /* 드롭다운보다 아래 */
+`;
+
+export const NoticeDropdown = styled.div`
+  position: fixed; /* 화면에 고정 */
+  top: 50%; /* 수직 중앙 */
+  left: 50%; /* 수평 중앙 */
+  transform: translate(-50%, -50%); /* 중앙으로 이동 */
+  background-color: white; /* 배경색 */
+  border: 1px solid #ccc; /* 테두리 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 */
+  z-index: 10; /* 다른 요소 위에 표시 */
+  padding: 10px; /* 패딩 추가 */
+`;
 
 export const NoticeTmfDiv = styled.div`
   position: absolute;
@@ -58,10 +82,6 @@ export const NoticeTmfDiv = styled.div`
   justify-content: flex-end;
 `;
 
-export const createNoticeHoverDiv = styled.input`
-
-`
-
 export const NoticeText = styled.span`
   position: absolute;
   width: 85px;
@@ -69,7 +89,7 @@ export const NoticeText = styled.span`
   left: 30px;
   top: 30px;
 
-  font-fmaily: 'Pretendard';
+  font-family: 'Pretendard'; /* 오타 수정 */
   font-style: normal;
   font-weight: 700;
   font-size: 21.1111px;
@@ -95,8 +115,8 @@ export const MainMenus = styled.span`
 
   display: flex;
 
-  font-fmaily: 'Pretendard';
-  font-weight: 600px;
+  font-family: 'Pretendard'; /* 오타 수정 */
+  font-weight: 600; /* px 제거 */
   border-radius: 16px;
   background: white;
 `;
@@ -124,7 +144,7 @@ export const MenuIconBlue = styled.div`
   margin-left: 20px;
   background: #003c82;
   border-radius: 16px;
-  cursor:pointer;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,7 +159,6 @@ export const MenuIcon = styled.img`
   -o-user-drag: none;
   user-drag: none;
   cursor: pointer;
-
 `;
 
 export const MenuText = styled.span`
@@ -147,12 +166,12 @@ export const MenuText = styled.span`
   height: 24px;
   margin-left: -44px;
   margin-top: 78px;
-  font-fmaily: 'Pretendard';
+  font-family: 'Pretendard'; /* 오타 수정 */
   font-style: normal;
   font-weight: 1000;
   font-size: 16.8889px;
   line-height: 24px;
   letter-spacing: -0.005em;
   color: #444444;
-  cursor:pointer;
+  cursor: pointer;
 `;

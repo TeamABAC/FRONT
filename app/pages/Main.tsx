@@ -2,11 +2,13 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react'
 import NavBar from '../components/NavBar';
 import * as S from '../styles/MainCss';
 
 function Main() {
   const router = useRouter();
+  const [showNotice, setShowNotice] = useState(false);
 
   function gotoDoor1() {
     router.push('/DoorCloth1');
@@ -20,20 +22,26 @@ function Main() {
     router.push('/EveryData')
   }
 
+  const toggleNotice = () => {
+    setShowNotice(!showNotice);
+    console.log("박서현 사랑해")
+  };
+
   return (
     <>
       <NavBar />
 
       <S.MainBodyDiv>
         <S.BackgroundImage src={'/Mainbackground.png'} alt="메인" />
-
+{/*공지사항*/}
         <S.NoticeTmfDiv>
           <S.NoticeText>공지사항</S.NoticeText>
-          <S.plusNoticebutton></S.plusNoticebutton>
+          <S.plusNoticebutton onClick={toggleNotice}>
+            <S.plusEmote src={'/plusImg.png'} alt="plus"/>
+          </S.plusNoticebutton>
         </S.NoticeTmfDiv>
 
         <S.MainBodyBlueStick />
-
         <S.MainMenu>
 
           <S.MainMenus onClick={gotoDoor1}>
