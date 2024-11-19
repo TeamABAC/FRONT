@@ -29,6 +29,12 @@ export const MainBodyDiv = styled.div`
   justify-content: center;
   align-items: center;
 `;
+export const plusNoticebutton = styled.div`
+width: 40px;
+height: 40px;
+background-color: #003C82;
+border-radius: 16px;
+`
 
 export const NoticeTmfDiv = styled.div`
   position: absolute;
@@ -40,6 +46,10 @@ export const NoticeTmfDiv = styled.div`
   box-shadow: 0px 3.16667px 11.875px rgba(0, 0, 0, 0.25);
   border-radius: 9.5px;
 `;
+
+export const createNoticeHoverDiv = styled.input`
+
+`
 
 export const NoticeText = styled.span`
   position: absolute;

@@ -7,14 +7,6 @@ import * as S from '../styles/MainCss';
 
 function Main() {
   const router = useRouter();
-  const idexedDb = window.indexedDB;
-
-  const indexedDb = window.indexedDB;
-  if (!indexedDb) {
-    console.log('IndexedDB가 지원되지 않습니다. 일부 기능이 제한됩니다.');
-  } else {
-    // DB 관련 코드 계속 진행
-  }
 
   function gotoDoor1() {
     router.push('/DoorCloth1');
@@ -27,6 +19,7 @@ function Main() {
   function goToEveryData() {
     router.push('/EveryData')
   }
+
   return (
     <>
       <NavBar />
@@ -36,6 +29,7 @@ function Main() {
 
         <S.NoticeTmfDiv>
           <S.NoticeText>공지사항</S.NoticeText>
+          <S.plusNoticebutton></S.plusNoticebutton>
         </S.NoticeTmfDiv>
 
         <S.MainBodyBlueStick />

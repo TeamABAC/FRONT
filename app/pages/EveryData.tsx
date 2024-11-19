@@ -19,7 +19,7 @@ function EveryData() {
           <S.listTopText absoluteLeft='170px'>신청일</S.listTopText>
           <S.listTopText absoluteLeft='380px'>건의 제목</S.listTopText>
           <S.listTopText absoluteLeft='600px'>건의 유형</S.listTopText>
-          <S.listTopText absoluteLeft='800px'>건의 상태</S.listTopText>
+          <S.listTopText absoluteLeft='780px'>건의 상태</S.listTopText>
         </S.listTop>
 
       </S.whiteDiv>
