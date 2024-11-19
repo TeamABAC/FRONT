@@ -30,10 +30,19 @@ export const MainBodyDiv = styled.div`
   align-items: center;
 `;
 export const plusNoticebutton = styled.div`
-width: 40px;
-height: 40px;
+width: 50px;
+height: 50px;
+margin: 20px 20px 20px 0px;
 background-color: #003C82;
 border-radius: 16px;
+display: flex;
+justify-content: center;
+align-items: center;
+`
+
+export const plusEmote = styled.img`
+  width:20px;
+  height: 20px;
 `
 
 export const NoticeTmfDiv = styled.div`
@@ -45,6 +54,8 @@ export const NoticeTmfDiv = styled.div`
   background: #ffffff;
   box-shadow: 0px 3.16667px 11.875px rgba(0, 0, 0, 0.25);
   border-radius: 9.5px;
+  display: flex;
+  justify-content: flex-end;
 `;
 
 export const createNoticeHoverDiv = styled.input`
