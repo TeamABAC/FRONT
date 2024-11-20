@@ -13,7 +13,6 @@ import styled from 'styled-components';
     width: 1048px;
     height: 990px;
     margin-top: 90px;
-    
     position: relative;
     box-shadow: 0px 3.16667px 7.91667px rgba(0, 0, 0, 0.25);
     border-radius: 15.8333px 15.8333px 0px 0px;

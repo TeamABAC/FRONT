@@ -175,3 +175,35 @@ export const MenuText = styled.span`
   color: #444444;
   cursor: pointer;
 `;
+
+export const NoticeInput = styled.input`
+  width: 100%; /* 입력 필드의 너비 */
+  padding: 10px; /* 패딩 */
+  margin-top: 10px; /* 위쪽 여백 */
+  border: 1px solid #ccc; /* 테두리 */
+  border-radius: 5px; /* 모서리 둥글게 */
+`;
+
+export const SubmitButton = styled.button`
+  padding: 10px;
+  background-color: #003C82;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+export const NoticeDiv = styled.div`
+  z-index: 4;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  top: -50px;
+  left: 300px;
+  box-shadow: 0px 3.16667px 11.875px rgba(0, 0, 0, 0.25);
+  border-radius: 9.5px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+`

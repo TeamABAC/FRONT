@@ -1,49 +1,54 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react'
 import NavBar from '../components/NavBar';
 import * as S from '../styles/MainCss';
 
 function Main() {
   const router = useRouter();
-  const [showNotice, setShowNotice] = useState(false);
+  const [noticeShow, setnoticeShow] = useState(false);
 
   function gotoDoor1() {
     router.push('/DoorCloth1');
-  };
+  }
 
-  function gotoMypage(){
-    router.push('/MyPage')
+  function gotoMypage() {
+    router.push('/MyPage');
   }
 
   function goToEveryData() {
-    router.push('/EveryData')
+    router.push('/EveryData');
   }
 
-  const toggleNotice = () => {
-    setShowNotice(!showNotice);
-    console.log("박서현 사랑해")
-  };
-
+  function showNotice() {
+    setnoticeShow(true);
+    console.log('babo');
+  }
   return (
     <>
       <NavBar />
 
       <S.MainBodyDiv>
         <S.BackgroundImage src={'/Mainbackground.png'} alt="메인" />
-{/*공지사항*/}
+        
+        {/* 공지사항 작성 */}
         <S.NoticeTmfDiv>
           <S.NoticeText>공지사항</S.NoticeText>
-          <S.plusNoticebutton onClick={toggleNotice}>
-            <S.plusEmote src={'/plusImg.png'} alt="plus"/>
+          <S.plusNoticebutton onClick={showNotice}>
+            <S.plusEmote src={'/plusImg.png'} alt="plus" />
           </S.plusNoticebutton>
+          {setnoticeShow && (
+            <S.NoticeDiv>
+              
+            </S.NoticeDiv>
+          )}
+
         </S.NoticeTmfDiv>
 
         <S.MainBodyBlueStick />
-        <S.MainMenu>
 
+        <S.MainMenu>
           <S.MainMenus onClick={gotoDoor1}>
             <S.MenuIconBlue>
               <S.MenuIcon src={'/icon1.png'} alt="아이콘1" />
@@ -71,7 +76,6 @@ function Main() {
             </S.MenuIconBlue>
             <S.MenuText>마이페이지</S.MenuText>
           </S.MainMenus>
-
         </S.MainMenu>
       </S.MainBodyDiv>
     </>
