@@ -3,10 +3,10 @@ import '../fonts/FontOnly.css';
 
 export const BackgroundImage = styled.img`
   position: absolute;
+  top: 0px;
+  left: 0px;
   width: 100%;
   height: 433.83px;
-  left: 0px;
-  top: 70px;
 
   -webkit-user-drag: none;
   -khtml-user-drag: none;
@@ -28,13 +28,14 @@ export const MainBodyDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 `;
 
 export const plusNoticebutton = styled.div`
   width: 40px;
   height: 40px;
   margin: 20px 20px 20px 0px;
-  background-color: #003C82;
+  background-color: #003c82;
   border-radius: 16px;
   display: flex;
   justify-content: center;
@@ -51,30 +52,58 @@ export const Overlay = styled.div`
   position: fixed; /* 화면에 고정 */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5); /* 반투명 검정색 */
-  z-index: 5; /* 드롭다운보다 아래 */
+  z-index: 5; /* 공지사항 뒤에 위치 */
 `;
 
-export const NoticeDropdown = styled.div`
-  position: fixed; /* 화면에 고정 */
-  top: 50%; /* 수직 중앙 */
-  left: 50%; /* 수평 중앙 */
-  transform: translate(-50%, -50%); /* 중앙으로 이동 */
-  background-color: white; /* 배경색 */
-  border: 1px solid #ccc; /* 테두리 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 */
-  z-index: 10; /* 다른 요소 위에 표시 */
-  padding: 10px; /* 패딩 추가 */
+export const NoticeDiv = styled.div`
+  position: fixed; /* 화면 고정 */
+  z-index: 10; /* Backdrop 위 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 420px;
+  background: #ffffff; /* 흰 배경 */
+  backdrop-filter: blur(2px); /* 배경 블러 효과 */
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+`;
+
+
+export const NoticeMaketext = styled.span`
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 33.7778px;
+  line-height: 40px;
+  letter-spacing: -0.005em;
+  color: #000000;
+  position: absolute;
+  top: 40px;
+`;
+
+export const NoticeCloseX = styled.img`
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 `;
 
 export const NoticeTmfDiv = styled.div`
   position: absolute;
+  top: 70px;
+  left: 140px;
   width: 475px;
   height: 318px;
-  left: 204px;
-  top: 130.95px;
   background: #ffffff;
   box-shadow: 0px 3.16667px 11.875px rgba(0, 0, 0, 0.25);
   border-radius: 9.5px;
@@ -89,7 +118,7 @@ export const NoticeText = styled.span`
   left: 30px;
   top: 30px;
 
-  font-family: 'Pretendard'; /* 오타 수정 */
+  font-family: 'Pretendard';
   font-style: normal;
   font-weight: 700;
   font-size: 21.1111px;
@@ -98,40 +127,34 @@ export const NoticeText = styled.span`
   color: #000000;
 `;
 
-export const MainBodyBlueStick = styled.span`
+export const MainBodyBlueStick = styled.div`
   width: 478.17px;
   height: 19px;
   left: 510.36px;
   top: 514.11px;
-
   background: #003c82;
   border-radius: 12.6667px;
 `;
 
-export const MainMenus = styled.span`
+export const MainMenus = styled.div`
   width: 268px;
   height: 144px;
   margin: 0 auto;
-
   display: flex;
-
-  font-family: 'Pretendard'; /* 오타 수정 */
-  font-weight: 600; /* px 제거 */
+  font-family: 'Pretendard';
+  font-weight: 600;
   border-radius: 16px;
   background: white;
+  z-index: 1; /* 메뉴 기본 레벨 */
 `;
 
 export const MainMenu = styled.div`
   display: flex;
   position: absolute;
-  gap: 80px;
-
   width: 1300px;
   height: 144px;
-
-  top: 600px;
-
-  filter: drop-shadow(0px 5.27778px 7.38889px #99A1B5);
+  top: 500px;
+  filter: drop-shadow(0px 5.27778px 7.38889px #99a1b5);
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -166,7 +189,7 @@ export const MenuText = styled.span`
   height: 24px;
   margin-left: -44px;
   margin-top: 78px;
-  font-family: 'Pretendard'; /* 오타 수정 */
+  font-family: 'Pretendard';
   font-style: normal;
   font-weight: 1000;
   font-size: 16.8889px;
@@ -176,34 +199,13 @@ export const MenuText = styled.span`
   cursor: pointer;
 `;
 
-export const NoticeInput = styled.input`
-  width: 100%; /* 입력 필드의 너비 */
-  padding: 10px; /* 패딩 */
-  margin-top: 10px; /* 위쪽 여백 */
-  border: 1px solid #ccc; /* 테두리 */
-  border-radius: 5px; /* 모서리 둥글게 */
+export const Backdrop = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+  z-index: 1;
 `;
 
-export const SubmitButton = styled.button`
-  padding: 10px;
-  background-color: #003C82;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-`;
-
-export const NoticeDiv = styled.div`
-  z-index: 4;
-  position: relative;
-  width: 500px;
-  height: 500px;
-  background-color: white;
-  top: -50px;
-  left: 300px;
-  box-shadow: 0px 3.16667px 11.875px rgba(0, 0, 0, 0.25);
-  border-radius: 9.5px;
-  display: block;
-  justify-content: center;
-  align-items: center;
-`

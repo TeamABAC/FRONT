@@ -8,7 +8,7 @@ interface RadioLabelProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; // onChange 핸들러 추가
 }
 
-export const RadioCheck: React.FC<RadioLabelProps> = ({ radioLabelText, disradioLabelText, name, onChange }) => {
+export const RadioCheck: React.FC<RadioLabelProps> = ({ radioLabelText, disradioLabelText, name, onChange, }) => {
   return (
     <>
       <S.RadioLabel>

@@ -8,46 +8,69 @@ import * as S from '../styles/MainCss';
 function Main() {
   const router = useRouter();
   const [noticeShow, setnoticeShow] = useState(false);
+  const noticeRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (noticeRef.current && !noticeRef.current.contains(event.target)) {
+        setnoticeShow(false); // 공지사항 외부 클릭 시 닫힘
+      }
+    }
+  
+    if (noticeShow) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+  
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [noticeShow]);
+
 
   function gotoDoor1() {
-    router.push('/DoorCloth1');
+    if (!noticeShow) router.push('/DoorCloth1');
   }
 
   function gotoMypage() {
-    router.push('/MyPage');
+    if (!noticeShow) router.push('/MyPage');
   }
 
   function goToEveryData() {
-    router.push('/EveryData');
+    if (!noticeShow) router.push('/EveryData');
   }
 
-  function showNotice() {
-    setnoticeShow(true);
-    console.log('babo');
+  function toggleNotice() {
+    setnoticeShow(!noticeShow);
   }
+
   return (
     <>
       <NavBar />
 
       <S.MainBodyDiv>
+        {noticeShow && <S.Backdrop />}
         <S.BackgroundImage src={'/Mainbackground.png'} alt="메인" />
-        
-        {/* 공지사항 작성 */}
+
         <S.NoticeTmfDiv>
           <S.NoticeText>공지사항</S.NoticeText>
-          <S.plusNoticebutton onClick={showNotice}>
+          <S.plusNoticebutton onClick={toggleNotice}>
             <S.plusEmote src={'/plusImg.png'} alt="plus" />
           </S.plusNoticebutton>
-          {setnoticeShow && (
-            <S.NoticeDiv>
-              
+          {noticeShow && (
+            <S.NoticeDiv ref={noticeRef}>
+              <S.NoticeMaketext>공지 작성</S.NoticeMaketext>
+              <S.NoticeCloseX
+                src={'CloseX.png'}
+                alt='하 준혁아...'
+                onClick={() => setnoticeShow(false)}
+              />
             </S.NoticeDiv>
           )}
-
         </S.NoticeTmfDiv>
 
         <S.MainBodyBlueStick />
 
+        {/* 메뉴 */}
         <S.MainMenu>
           <S.MainMenus onClick={gotoDoor1}>
             <S.MenuIconBlue>
@@ -72,7 +95,7 @@ function Main() {
 
           <S.MainMenus onClick={gotoMypage}>
             <S.MenuIconBlue>
-              <S.MenuIcon src={'/icon2.png'} alt='아이콘2' />
+              <S.MenuIcon src={'/icon2.png'} alt="아이콘2" />
             </S.MenuIconBlue>
             <S.MenuText>마이페이지</S.MenuText>
           </S.MainMenus>
