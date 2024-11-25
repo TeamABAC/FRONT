@@ -65,7 +65,7 @@ export const NoticeDiv = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 700px;
-  height: 420px;
+  height: 500px;
   background: #ffffff; /* 흰 배경 */
   backdrop-filter: blur(2px); /* 배경 블러 효과 */
   border-radius: 16px;
@@ -80,7 +80,7 @@ export const NoticeDiv = styled.div`
 export const NoticeMaketext = styled.span`
   font-family: 'Pretendard';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 33.7778px;
   line-height: 40px;
   letter-spacing: -0.005em;
@@ -91,8 +91,8 @@ export const NoticeMaketext = styled.span`
 
 export const NoticeCloseX = styled.img`
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 40px;
+  top: 40px;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -111,13 +111,70 @@ export const NoticeTmfDiv = styled.div`
   justify-content: flex-end;
 `;
 
+export const TitleRow = styled.div`
+  display: flex;
+  align-items: center; /* 수직 정렬 */
+  margin-top: 10px; /* 아래 여백 */
+  width:100%;
+  height:auto;
+  gap:20px;
+`;
+
+export const bodyRow = styled.div`
+  display: flex;
+  align-items: center; /* 수직 정렬 */
+  widht: 100%;
+  height: auto;
+  gap: 20px;
+  margin-top: 20px;
+`;
+
+export const noticeTypeContainer = styled.div`
+  border: 1px solid #000; /* 큰 테두리 */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 660px;
+  height: 291px;
+  margin-top: 10px;
+  display: inline;
+`
+
+export const noticeTitleInput = styled.input`
+  width: 500px;
+  height: 30px;
+  color: black;
+  border: 1px solid #000; /* 큰 테두리 */
+  padding: 10px;
+  font-size: 20px;
+`
+export const noticeBodyInput = styled.textarea`
+  width: 500px;
+  height: 200px;
+  color: black;
+  resize: none;
+  padding-left: 10px;
+  padding-top: 10px;
+  border: 1px solid #000;
+  font-size: 20px;
+  line-height: 1.5px;
+`
+
+export const noticeInpuText = styled.span`
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21.1111px;
+  line-height: 31px;
+  color: black;
+`
+
 export const NoticeText = styled.span`
   position: absolute;
   width: 85px;
   height: 28px;
   left: 30px;
   top: 30px;
-
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 700;
@@ -126,6 +183,28 @@ export const NoticeText = styled.span`
   letter-spacing: -0.005em;
   color: #000000;
 `;
+
+export const SubmitButton = styled.span`
+position: absolute;
+width: 220px;
+height: 50px;
+background: #003C82;
+border-radius: 9.5px;
+bottom:30px;
+left:240px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+`
+export const SubmitText = styled.span`
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 600;
+font-size: 28.5px;
+line-height: 34px;
+color: white;
+`
 
 export const MainBodyBlueStick = styled.div`
   width: 478.17px;

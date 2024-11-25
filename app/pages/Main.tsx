@@ -59,11 +59,23 @@ function Main() {
           {noticeShow && (
             <S.NoticeDiv ref={noticeRef}>
               <S.NoticeMaketext>공지 작성</S.NoticeMaketext>
-              <S.NoticeCloseX
-                src={'CloseX.png'}
-                alt='하 준혁아...'
-                onClick={() => setnoticeShow(false)}
-              />
+              <S.NoticeCloseX src={'CloseX.png'} alt='하 준혁아...' onClick={() => setnoticeShow(false)}/>
+              
+              <S.noticeTypeContainer>
+                <S.TitleRow>
+                <S.noticeInpuText>제목</S.noticeInpuText>
+                <S.noticeTitleInput />
+                </ S.TitleRow>
+
+                <S.bodyRow>
+                <S.noticeInpuText>내용</S.noticeInpuText>
+                <S.noticeBodyInput />  
+                </S.bodyRow>
+
+                <S.SubmitButton onClick={() => setnoticeShow(false)}>
+                  <S.SubmitText>확인</S.SubmitText>
+                </S.SubmitButton>
+              </S.noticeTypeContainer>
             </S.NoticeDiv>
           )}
         </S.NoticeTmfDiv>
