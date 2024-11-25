@@ -153,11 +153,10 @@ export const noticeBodyInput = styled.textarea`
   height: 200px;
   color: black;
   resize: none;
-  padding-left: 10px;
-  padding-top: 10px;
+  padding: 10px 0 0 10px;
   border: 1px solid #000;
   font-size: 20px;
-  line-height: 1.5px;
+  line-height: 1.5;
 `
 
 export const noticeInpuText = styled.span`

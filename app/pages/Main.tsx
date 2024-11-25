@@ -13,7 +13,7 @@ function Main() {
   useEffect(() => {
     function handleClickOutside(event) {
       if (noticeRef.current && !noticeRef.current.contains(event.target)) {
-        setnoticeShow(false); // 공지사항 외부 클릭 시 닫힘
+        setnoticeShow(false);
       }
     }
   
@@ -26,6 +26,20 @@ function Main() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [noticeShow]);
 
+  const [noticeTitle, setnoticeTitle] = useState('');
+  const [noticeBody, setnoticeBody] = useState('');
+
+  function noticeSubmit() {
+    const noticeData = {
+      title: noticeTitle,
+      body: noticeBody,
+    };
+    localStorage.setItem('notice', JSON.stringify(noticeData));
+
+    setnoticeTitle('');
+    setnoticeBody('');
+    setnoticeShow(false);
+  }
 
   function gotoDoor1() {
     if (!noticeShow) router.push('/DoorCloth1');
@@ -64,12 +78,12 @@ function Main() {
               <S.noticeTypeContainer>
                 <S.TitleRow>
                 <S.noticeInpuText>제목</S.noticeInpuText>
-                <S.noticeTitleInput />
+                <S.noticeTitleInput value={noticeTitle} onChange={(e) => setnoticeTitle(e.target.value)}/>
                 </ S.TitleRow>
 
                 <S.bodyRow>
                 <S.noticeInpuText>내용</S.noticeInpuText>
-                <S.noticeBodyInput />  
+                <S.noticeBodyInput value={noticeBody} onChange={(e) => setnoticeBody(e.target.value)}/>  
                 </S.bodyRow>
 
                 <S.SubmitButton onClick={() => setnoticeShow(false)}>
