@@ -287,3 +287,17 @@ export const Backdrop = styled.div`
   z-index: 1;
 `;
 
+export const SavedNoticeBody = styled.span`
+  width: 100px;
+  hegiht:100px;
+`
+export const SavedNoticeDiv = styled.div`
+width: 440px;
+height: 120x;
+
+background: #EDF0F5;
+border-radius: 15.8333px;
+`
+
+export const SavedNoticeTitle = styled.span`
+`
