@@ -287,17 +287,26 @@ export const Backdrop = styled.div`
   z-index: 1;
 `;
 
-export const SavedNoticeBody = styled.span`
-  width: 100px;
-  hegiht:100px;
-`
 export const SavedNoticeDiv = styled.div`
-width: 440px;
-height: 120x;
-
+width: 40px;
+height: 20x;
 background: #EDF0F5;
 border-radius: 15.8333px;
+left: 20px;
 `
 
 export const SavedNoticeTitle = styled.span`
+
+`
+export const SavedNoticeBody = styled.span`
+  color: black;
+`
+export const noticeHeaderRow = styled.div`
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  position: relative;
+  disflay: flex;
+  justify-content: center;
+  align-items: center;
 `
