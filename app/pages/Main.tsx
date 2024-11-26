@@ -7,12 +7,12 @@ import * as S from '../styles/MainCss';
 
 function Main() {
   const router = useRouter();
-  const [noticeShow, setnoticeShow] = useState(false);
+  const [noticeShow, setNoticeShow] = useState(false);
   const noticeRef = useRef(null);
 
   const [noticeTitle, setNoticeTitle] = useState('');
   const [noticeBody, setNoticeBody] = useState('');
-  const [savedNotice, setSavedNotice] = useState<savedNotice | null>(null);
+  const [savedNotices, setSavedNotices] = useState<savedNotice[]>([]);
 
   interface savedNotice {
     title: string;
@@ -21,16 +21,14 @@ function Main() {
 
   useEffect(() => {
     // 컴포넌트가 마운트될 때 로컬 스토리지에서 공지사항을 가져옴
-    const noticeData = localStorage.getItem('notice');
-    if (noticeData) {
-      setSavedNotice(JSON.parse(noticeData));
-    }
+    const noticeData = JSON.parse(localStorage.getItem('notices')) || [];
+    setSavedNotices(noticeData);
   }, []);
 
   useEffect(() => {
     function handleClickOutside(event) {
       if (noticeRef.current && !noticeRef.current.contains(event.target)) {
-        setnoticeShow(false); // 공지사항 외부 클릭 시 닫힘
+        setNoticeShow(false); // 공지사항 외부 클릭 시 닫힘
       }
     }
     if (noticeShow) {
@@ -47,15 +45,17 @@ function Main() {
       title: noticeTitle,
       body: noticeBody,
     };
-    localStorage.setItem('notice', JSON.stringify(noticeData));
+
+    // 기존 공지사항 가져오기
+    const updatedNotices = [...savedNotices, noticeData];
+    localStorage.setItem('notices', JSON.stringify(updatedNotices));
 
     // 상태 초기화
-    setSavedNotice(noticeData); // 저장된 공지사항 상태 업데이트
+    setSavedNotices(updatedNotices); // 저장된 공지사항 상태 업데이트
     setNoticeTitle('');
     setNoticeBody('');
-    setnoticeShow(false);
+    setNoticeShow(false);
   }
-
 
   function gotoDoor1() {
     if (!noticeShow) router.push('/DoorCloth1');
@@ -70,9 +70,8 @@ function Main() {
   }
 
   function toggleNotice() {
-    setnoticeShow(!noticeShow);
+    setNoticeShow(!noticeShow);
   }
-
 
   return (
     <>
@@ -93,7 +92,7 @@ function Main() {
           {noticeShow && (
             <S.NoticeDiv ref={noticeRef}>
               <S.NoticeMaketext>공지 작성</S.NoticeMaketext>
-              <S.NoticeCloseX src={'CloseX.png'} alt='하 준혁아...' onClick={() => setnoticeShow(false)} />
+              <S.NoticeCloseX src={'CloseX.png'} alt='하 준혁아...' onClick={() => setNoticeShow(false)} />
               
               <S.noticeTypeContainer>
                 <S.TitleRow>
@@ -113,14 +112,13 @@ function Main() {
             </S.NoticeDiv>
           )}
           
-        {savedNotice && (
-          <S.SavedNoticeDiv>
-            <S.SavedNoticeTitle>{savedNotice.title}</S.SavedNoticeTitle>
-            <S.SavedNoticeBody>{savedNotice.body}</S.SavedNoticeBody>
-          </S.SavedNoticeDiv>
-        )}
+          {savedNotices.map((notice, index) => (
+              <S.SavedNoticeDiv key={index}>
+              <S.SavedNoticeTitle>{notice.title}</S.SavedNoticeTitle>
+                <S.SavedNoticeBody>{notice.body}</S.SavedNoticeBody>
+              </S.SavedNoticeDiv>
+          ))}
         </S.NoticeTmfDiv>
-
 
         <S.MainBodyBlueStick />
 
