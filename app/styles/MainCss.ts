@@ -57,8 +57,7 @@ export const NoticeDiv = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 700px; // 고정된 너비
-  max-height: 500px; // 최대 높이 설정
-  overflow-y: auto; // 세로 스크롤 가능
+  height: 500px;
   background: #ffffff;
   backdrop-filter: blur(2px);
   border-radius: 16px;
@@ -100,8 +99,12 @@ export const NoticeTmfDiv = styled.div`
   display: flex;
   flex-direction: column; /* 세로 정렬 */
   align-items: center; /* 왼쪽 정렬 */
-  overflow: scroll;
-`;
+   overflow-y: scroll; // 스크롤 가능하게 하되 스크롤바 숨기기
+
+   &::-webkit-scrollbar{
+    display: none;
+   }
+  `;
 
 export const TitleRow = styled.div`
   display: flex;
@@ -267,41 +270,41 @@ export const Backdrop = styled.div`
 
 
 export const SavedNoticeTitle = styled.span`
-font-family: 'Pretendard';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 20px;
-letter-spacing: 0.005em;
-color: #000000;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: #000000;
 `;
 
 export const SavedNoticeBody = styled.span`
-font-family: 'Pretendard';
-font-style: normal;
-font-weight: 200;
-font-size: 16px;
-line-height: 16px;
-letter-spacing: 0.005em;
-color: #000000;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.005em;
+  color: #000000;
 `;
 
 export const noticeHeaderRow = styled.div`
-width: 100%;
-height: auto;
-margin-top: 20px;
-position: relative;
-display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 0px;
+  position: relative;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   `;
-  
+
   export const SavedNoticeDiv = styled.div`
   width: 440px;
-  height: 114px;
+  min-height: 114px;
   background: #EDF0F5;
   border-radius: 16px;
-   display: flex;
+  display: flex;
   flex-direction: column; /* 세로 정렬 */
   gap: 10px;
   padding: 10px 0 0 10px;

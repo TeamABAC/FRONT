@@ -6,6 +6,7 @@ import NavBar from '../components/NavBar';
 import * as S from '../styles/MainCss';
 
 function Main() {
+
   const router = useRouter();
   const [noticeShow, setNoticeShow] = useState(false);
   const noticeRef = useRef(null);
