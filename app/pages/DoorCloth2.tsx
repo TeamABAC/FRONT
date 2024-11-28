@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import NavBar from '../components/NavBar';
 import ImageUp from '../components/ImageUp';
@@ -10,7 +10,19 @@ import * as S from '../styles/DoorCloth2Css';
 function DoorCloth2() {
   const router = useRouter();
   const [selectedOption, setSelectedOption] = useState<string | null>(null); // 선택된 건의 유형 상태 관리
+  const [savedDoorCloth, setsavedDoorcloth] = useState<savedDoorCloth[]>([]);
 
+  interface savedDoorCloth {
+    title: string;
+    body: string;
+    img: File;
+  }
+
+  useEffect(() => {
+    // 컴포넌트가 마운트될 때 로컬 스토리지에서 공지사항을 가져옴
+    const doorClothData = JSON.parse(localStorage.getItem('doorcloth')) || [];
+    setsavedDoorcloth(doorClothData);
+  }, []);
   function handleOptionChange(e: React.ChangeEvent<HTMLInputElement>) {
     setSelectedOption(e.target.value); // 선택된 옵션 상태 업데이트
   }
@@ -53,20 +65,8 @@ function DoorCloth2() {
           <S.CheckBoxDiv>
             <S.CheckDivideText>건의 구분</S.CheckDivideText>
             <S.RadioCheckDiv>
-              <RadioCheck 
-                radioLabelText='학교폭력 건의' 
-                disradioLabelText='급식 건의' 
-                name='checklist'
-                onChange={handleOptionChange} 
-                value='학교폭력 건의' // 라디오 버튼의 값 설정
-              />
-              <RadioCheck 
-                radioLabelText='시설관련 건의' 
-                disradioLabelText='기타 건의' 
-                name='checklist'
-                onChange={handleOptionChange} 
-                value='시설관련 건의' // 라디오 버튼의 값 설정
-              />
+              <RadioCheck radioLabelText='학교폭력 건의' disradioLabelText='급식 건의' name='checklist' onChange={handleOptionChange} value='학교폭력 건의'/>
+              <RadioCheck radioLabelText='시설관련 건의' disradioLabelText='기타 건의' name='checklist'onChange={handleOptionChange} value='시설관련 건의'/>
             </S.RadioCheckDiv>
             <S.GrayText>※신청하실 건의의 유형을 선택해주십시오.</S.GrayText>
           </S.CheckBoxDiv>
