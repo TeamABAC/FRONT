@@ -39,24 +39,25 @@ function Main() {
     }
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [noticeShow]);
-
-  // 공지 작성 제출 함수
-  function handleSubmit() {
-    const noticeData: savedNotice = {
+  
+// 공지 작성 제출 함수
+function handleSubmit() {
+  const noticeData: savedNotice = {
       title: noticeTitle,
       body: noticeBody,
-    };
+  };
 
-    // 기존 공지사항 가져오기
-    const updatedNotices = [...savedNotices, noticeData];
-    localStorage.setItem('notices', JSON.stringify(updatedNotices));
+  // 새로운 공지사항을 배열의 맨 앞에 추가
+  const updatedNotices = [noticeData, ...savedNotices];
+  localStorage.setItem('notices', JSON.stringify(updatedNotices));
 
-    // 상태 초기화
-    setSavedNotices(updatedNotices); // 저장된 공지사항 상태 업데이트
-    setNoticeTitle('');
-    setNoticeBody('');
-    setNoticeShow(false);
-  }
+  // 상태 초기화
+  setSavedNotices(updatedNotices); // 저장된 공지사항 상태 업데이트
+  setNoticeTitle('');
+  setNoticeBody('');
+  setNoticeShow(false);
+}
+
 
   function gotoDoor1() {
     if (!noticeShow) router.push('/DoorCloth1');

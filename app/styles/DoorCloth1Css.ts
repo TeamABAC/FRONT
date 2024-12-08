@@ -1,109 +1,105 @@
 import styled from 'styled-components';
 
-  export const BackgroundColor = styled.div`
-    background-color: #f4f4f4;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: 1080px;
-  `;
+export const BackgroundColor = styled.div`
+  background-color: #f4f4f4;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 1080px;
+`;
 
-  export const WhiteDiv = styled.div`
-    background-color: white;
-    width: 1048px;
-    height: 990px;
-    margin-top: 90px;
-    position: relative;
-    box-shadow: 0px 3.16667px 7.91667px rgba(0, 0, 0, 0.25);
-    border-radius: 15.8333px 15.8333px 0px 0px;
-    display: flex;
-    justify-content: center;
-    text-aligns: center;
-    user-select: text;
-  `;
+export const WhiteDiv = styled.div`
+  background-color: white;
+  width: 1048px;
+  height: 990px;
+  margin-top: 90px;
+  position: relative;
+  box-shadow: 0px 3.16667px 7.91667px rgba(0, 0, 0, 0.25);
+  border-radius: 15.8333px 15.8333px 0px 0px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  user-select: text;
+`;
 
-  export const TendinousText = styled.span`
-    width: 70px;
-    height: 55px;
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 38px;
-    line-height: 55px;
+export const TendinousText = styled.span`
+  width: 70px;
+  height: 55px;
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 55px;
+  position: absolute;
+  color: #000000;
+  top: 30px;
+`;
 
-    position: absolute;
-    color: #000000;
-    top: 30px;
-    `;
+interface DivideLineProps {
+  top: string;
+}
 
-  interface DivideLineProps {
-    top: string;
-  }
+export const DivideLine = styled.div<DivideLineProps>`
+  width: 900px;
+  height: 1px;
+  position: absolute;
+  top: ${({ top }) => top};
+  background-color: black;
+`;
 
-  export const DivideLine = styled.div<DivideLineProps>`
-    width: 900px;
-    height: 1px;
-    position: absolute;
-    top: ${({ top }) => top};
-    background-color: black;
-  `;
+export const RoundDiv = styled.div`
+  width: 1000px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 200px;
+  gap: 130px;
+`;
 
-  export const RoundDiv = styled.div`
-    width: 1000px;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 200px;
-    gap: 130px;
-  `;
+export const RoundOne = styled.div`
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3.5px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #f4f4f4;
+`;
 
-  export const RoundOne = styled.div`
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3.5px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: #f4f4f4;
-  `;
+export const RoundTwo = styled.div`
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3.5px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #003c82;
+`;
 
-  export const RoundTwo = styled.div`
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3.5px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: #003c82;
-  `;
+export const RoundText = styled.span`
+  width: 120px;
+  height: 35px;
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-size: 25.3333px;
+  line-height: 37px;
+  color: #444444;
+`;
 
-  export const RoundText = styled.span`
-    width: 120px;
-    height: 35px;
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 25.3333px;
-    line-height: 37px;
-    color: #444444;
-  `;
-
-  export const RoundText2 = styled.span`
-    width: 120px;
-    height: 37px;
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 25.3333px;
-    line-height: 37px;
-    color: white;
-    text-align: center;
-  `;
+export const RoundText2 = styled.span`
+  width: 120px;
+  height: 37px;
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-size: 25.3333px;
+  line-height: 37px;
+  color: white;
+  text-align: center;
+`;
 
 export const DivideBlueLine = styled.div`
   width: 898px;
@@ -112,7 +108,6 @@ export const DivideBlueLine = styled.div`
   top: 400px;
   display: flex;
   align-items: center;
-  justy-content: center;
   background: #003c82;
   border-radius: 15.8333px 15.8333px 0px 0px;
 `;
@@ -120,7 +115,6 @@ export const DivideBlueLine = styled.div`
 export const DivideBlueText = styled.span`
   margin-left: 16px;
   font-family: 'Pretendard';
-  font-style: normal;
   font-weight: 600;
   font-size: 20px;
   color: #ffffff;
@@ -130,7 +124,6 @@ export const AgreeText = styled.span`
   width: 236px;
   height: 26px;
   font-family: 'Pretendard';
-  font-style: normal;
   font-weight: 500;
   font-size: 21.1111px;
   line-height: 26px;
@@ -162,7 +155,6 @@ export const AgreeContentText = styled.span`
   width: 543px;
   height: 18px;
   font-family: 'Pretendard';
-  font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
@@ -170,32 +162,29 @@ export const AgreeContentText = styled.span`
   margin-left: 10px;
 `;
 
-
-interface AgreeChckDivProps {
-  Agreetop: string;
-  Agreeleft: string;
+interface AgreeCheckDivProps {
+  $Agreetop: string;
+  $Agreeleft: string;
 }
-export const AgreeCheckDiv = styled.div<AgreeChckDivProps>`
+
+export const AgreeCheckDiv = styled.div<AgreeCheckDivProps>`
   box-sizing: border-box;
   position: absolute;
-  position: relative;
   width: 222px;
   height: 55px;
-  top: ${({ Agreetop }) => Agreetop};
-  left:${({ Agreeleft }) => Agreeleft};
+  top: ${({ $Agreetop }) => $Agreetop};
+  left: ${({ $Agreeleft }) => $Agreeleft};
   background: #ffffff;
   border: 1px solid #444444;
   border-radius: 4px;
   display: flex;
   justify-content: center;
-  gap: 40px; 
+  gap: 40px;
   align-items: center;
 `;
 
-
 export const RadioLabel = styled.label`
- font-family: 'Pretendard';
-  font-style: normal;
+  font-family: 'Pretendard';
   font-weight: 400;
   font-size: 15px;
   color: black;
@@ -231,48 +220,57 @@ export const RadioButton = styled.input.attrs({ type: 'radio' })`
 `;
 
 export const TextSpan = styled.span`
-position: absolute;
-width: 178px;
-height: 24px;
-left: 80px;
-top: 720px;
+  position: absolute;
+  width: 178px;
+  height: 24px;
+  left: 80px;
+  top: 720px;
+  text-align: center;
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+`;
 
-text-aligns: center;
+export const Checkbutton = styled.div`
+  position: absolute;
+  width: 237px;
+  height: 56px;
+  left: 600px;
+  top: 881px;
+  background: #003C82;
+  border-radius: 9.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+`;
 
-font-family: 'Pretendard';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 24px;
+export const CheckText = styled.span`
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-size: 28.5px;
+  line-height: 34px;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+`;
 
-color: #000000;
+export const PrivateText = styled.span`
+  position:absolute;
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-size: 26px;
+  color: black;
+  top: 460px;
+  left: 80px;
 `
-
-export const Checkbutton = styled.div `
-position: absolute;
-width: 237px;
-height: 56px;
-left: 600x;
-top: 881px;
-
-background: #003C82;
-border-radius: 9.5px;
-
-display: flex;
-align-items: center;
-justify-content: center;
-cursor: pointer;
-`
-export const CheckText = styled.span `
-font-family: 'Wanted Sans';
-font-style: normal;
-font-weight: 600;
-font-size: 28.5px;
-line-height: 34px;
-
-text-align: center;
-
-color: #FFFFFF;
-
-cursor:pointer;
+export const PrivateContainer = styled.div`
+box-sizing: border-box;
+width: 898px;
+height: 52px;
+background: #white;
+border: 1px solid #black;
+border-radius: 8px;
 `

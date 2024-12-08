@@ -247,4 +247,3 @@ export const CheckText = styled.span`
   color: #FFFFFF;
   cursor: pointer;
 `;
-
