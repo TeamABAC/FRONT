@@ -18,8 +18,8 @@ function DoorCloth1() {
       { key: 'isPublic', value: isPublic }
     ];
     setData(updatedData);
-    localStorage.setItem('doorClothData', JSON.stringify(updatedData));
   }
+
 
   // 다음 페이지로 이동
   function goToDoor2Page() {
@@ -55,7 +55,7 @@ function DoorCloth1() {
           </S.DivideBlueLine>
 
           <S.PrivateText>개인정보 수집 및 이용 동의</S.PrivateText>
-          <S.PrivateContainer></S.PrivateContainer>
+          <S.PrivateContainer>afdfsdsaf</S.PrivateContainer>
 
           <S.TextSpan>건의 공개 여부</S.TextSpan>
           <S.AgreeCheckDiv $Agreetop="710px" $Agreeleft="700px">

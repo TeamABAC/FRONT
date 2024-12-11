@@ -113,7 +113,7 @@ export const DivideBlueLine = styled.div`
 `;
 
 export const DivideBlueText = styled.span`
-  margin-left: 16px;
+  margin-left: 30px;
   font-family: 'Pretendard';
   font-weight: 600;
   font-size: 20px;
@@ -261,7 +261,7 @@ export const PrivateText = styled.span`
   position:absolute;
   font-family: 'Pretendard';
   font-weight: 600;
-  font-size: 26px;
+  font-size: 24px;
   color: black;
   top: 460px;
   left: 80px;
@@ -270,7 +270,8 @@ export const PrivateContainer = styled.div`
 box-sizing: border-box;
 width: 898px;
 height: 52px;
-background: #white;
-border: 1px solid #black;
-border-radius: 8px;
+background: #FFFFFF;
+border: 1px solid #444444;
+color: black;
+margin-top: 510px;
 `
