@@ -7,7 +7,7 @@ import RadioCheck from '../components/RadioCheck';
 import * as S from '../styles/DoorCloth1Css';
 import axios from 'axios';
 
-const BASE_URL = 'http://192.168.1.32:5000/'; // URL 받아온거 설정
+const BASE_URL = 'http://192.168.7.24:5000/'; // URL 받아온거 설정
 
 function DoorCloth1() {
   const router = useRouter();
@@ -31,6 +31,10 @@ function DoorCloth1() {
       console.error('GET 요청 실패:', error);
     }
   };
+
+  const publicValue = async () => {
+    const publicKey = axios.post(BASE_URL, {});
+  }
 
   // 다음 페이지로 이동
   function goToDoor2Page() {
