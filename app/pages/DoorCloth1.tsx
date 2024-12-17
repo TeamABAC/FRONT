@@ -72,8 +72,12 @@ fetchData();
 
           <S.PrivateText>개인정보 수집 및 이용 동의</S.PrivateText>
           <S.PrivateContainer>afdfsdsaf</S.PrivateContainer>
+          <S.agreeCheckSpan>개인정보 수집 및 이용 동의 여부</S.agreeCheckSpan>
+          <S.AgreeCheckDiv $Agreetop='600px' $Agreeleft='700px'>
+            <RadioCheck radioLabelText='동의' disradioLabelText='비동의' name='agree' onChange={handlePublic}></RadioCheck>
+          </S.AgreeCheckDiv>
 
-          <S.TextSpan>건의 공개 여부</S.TextSpan>
+          <S.publicTextSpan>건의 공개 여부</S.publicTextSpan>
           <S.AgreeCheckDiv $Agreetop="710px" $Agreeleft="700px">
             <RadioCheck
               radioLabelText="공개"

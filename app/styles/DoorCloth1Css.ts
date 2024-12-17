@@ -219,13 +219,10 @@ export const RadioButton = styled.input.attrs({ type: 'radio' })`
   }
 `;
 
-export const TextSpan = styled.span`
+export const publicTextSpan = styled.span`
   position: absolute;
-  width: 178px;
-  height: 24px;
   left: 80px;
   top: 720px;
-  text-align: center;
   font-family: 'Pretendard';
   font-weight: 500;
   font-size: 20px;
@@ -233,6 +230,16 @@ export const TextSpan = styled.span`
   color: #000000;
 `;
 
+export const agreeCheckSpan = styled.span`
+  position: absolute;
+  left: 80px;
+  top: 600px;
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+`
 export const Checkbutton = styled.div`
   position: absolute;
   width: 237px;
