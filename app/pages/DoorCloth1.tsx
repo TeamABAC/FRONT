@@ -77,6 +77,8 @@ fetchData();
             <RadioCheck radioLabelText='동의' disradioLabelText='비동의' name='agree' onChange={handlePublic}></RadioCheck>
           </S.AgreeCheckDiv>
 
+          <S.DivideLine top='680px'></S.DivideLine>
+
           <S.publicTextSpan>건의 공개 여부</S.publicTextSpan>
           <S.AgreeCheckDiv $Agreetop="710px" $Agreeleft="700px">
             <RadioCheck
