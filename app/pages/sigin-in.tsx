@@ -1,6 +1,6 @@
 'use client'
 import React, {useState} from 'react'
-import * as S from '../style/signin-in'
+import * as S from '../styles/signin-in'
 import { useRouter } from "next/navigation";
 import axios from 'axios';
 
@@ -26,23 +26,7 @@ const handleSubmit=(e:any) => {
     password:PasswordValue,
   };
 
-try{
 
-  const response = await axios.post{'${process.env.APPLICATION_'}
-}
-if(response.status === 200){
-  const{access,refresh}=response.data;
-  localStorage.setItem("access_token",response.data);
-  localStorage.setItem("refresh_token",response.data);
-
-
-  setTimeout(() => onSilentRefresh(access), JWT_EXPIRY_TIME - 60000);
-}
-
-cathch(error){
-console.log("로그인 실패",error);
-
-}
 };
 
   return (

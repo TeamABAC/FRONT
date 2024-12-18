@@ -1,9 +1,12 @@
 'use client'
 import React from 'react'
-import * as S from '../style/Login'
+import * as S from '../styles/Login'
 import { useRouter } from "next/navigation";
 
 function Login() {
+
+
+  
   return (
     <div>
       <S.ImageSettion> 
