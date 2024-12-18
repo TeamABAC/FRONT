@@ -5,9 +5,6 @@ import { useRouter } from 'next/navigation';
 import NavBar from '../components/NavBar';
 import RadioCheck from '../components/RadioCheck';
 import * as S from '../styles/DoorCloth1Css';
-import axios from 'axios';
-
-const BASE_URL = 'http://192.168.7.24:5000/'; // URL 받아온거 설정
 
 function DoorCloth1() {
   const router = useRouter();
@@ -22,19 +19,6 @@ function DoorCloth1() {
     ];
     setData(updatedData);
   }
-  
-  const fetchData = async () => { // 서버와 통신이 되고 있는지  확인하는거거
-    try {
-      const response = await axios.get(BASE_URL);
-      console.log('응답 데이터:', response.data);
-    } catch (error) { // 에러가 발생하면 무조건 실행 그냥 어떠한 에러든 전부 캐치
-      console.error('GET 요청 실패:', error);
-    }
-  };
-
-  const publicValue = async () => {
-    const publicKey = axios.post(BASE_URL, {});
-  }
 
   // 다음 페이지로 이동
   function goToDoor2Page() {
@@ -44,8 +28,6 @@ function DoorCloth1() {
       alert('공개 여부를 선택해 주세요.');
     }
   }
-
-fetchData();
   return (
     <>
       <NavBar /> {/* 네비게이션 바 컴포넌트 */}
