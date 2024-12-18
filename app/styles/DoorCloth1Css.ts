@@ -224,7 +224,7 @@ export const publicTextSpan = styled.span`
   left: 80px;
   top: 770px;
   font-family: 'Pretendard';
-  font-weight : 500;
+  font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   color: #000000;
@@ -238,7 +238,7 @@ export const agreeCheckSpan = styled.span`
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  color: #000000;H
+  color: #000000;
 `
 export const Checkbutton = styled.div`
   position: absolute;
