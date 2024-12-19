@@ -24,9 +24,6 @@ export const Background = styled.img`
 
 `;
 export const LoginWhite=styled.div`
-
-
-
 width: 400px;
 height: 340px;
 left: 560px;
@@ -82,7 +79,6 @@ outline: none
 `
 export const LoginButton=styled.div
 `
-
 width: 96px;
 height: 48px;
 margin-top:40px;
@@ -91,10 +87,10 @@ border-radius:18px;
 display: flex;
 align-items: center;
 justify-content: center;
+cursor:pointer;
 
 `
 export const LoginButtonText=styled.span`
-
 
 font-family: 'Pretendard';
 font-style: normal;
@@ -102,8 +98,6 @@ font-weight: 700;
 font-size: 16px;
 line-height: 19px;
 color: #FAFAFA;
-
-
 text-align: center;
  display: flex;
     align-items: center;
