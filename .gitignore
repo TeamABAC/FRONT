@@ -3,17 +3,8 @@
 # dependencies
 /node_modules
 /.pnp
-<<<<<<< HEAD
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-=======
 .pnp.js
 .yarn/install-state.gz
->>>>>>> deb28ce951d7321bb1d76fb34df920523f940b0f
 
 # testing
 /coverage
@@ -42,7 +33,6 @@ yarn-error.log*
 
 # local env files
 .env*.local
->>>>>>> deb28ce951d7321bb1d76fb34df920523f940b0f
 
 # vercel
 .vercel
