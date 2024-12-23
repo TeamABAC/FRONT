@@ -2,11 +2,16 @@
 import React from 'react'
 import * as S from '../styles/Login'
 import { useRouter } from "next/navigation";
+import axios from 'axios';
+
+
+function loginHandleSubmit (){
+  
+}
 
 function Login() {
   return (
     <>
-      <S.ImageSettion> 
       <S.Logo src="/logowhite.png" alt="로고" />
       <S.LoginWhite>
           <S.LoginWhiteText>로그인</S.LoginWhiteText>
@@ -20,9 +25,7 @@ function Login() {
       
       </S.LoginWhite>
       
-      <S.Background src='/background2.png' alt="배경">
-      </S.Background>
-      </S.ImageSettion>
+      <S.Background src='/background2.png' alt="배경"></S.Background>
     </>
   )
 }
