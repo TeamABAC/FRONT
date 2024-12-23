@@ -7,8 +7,8 @@ function Mypage() {
   return (
     <>
       <NavBar />
+      <S.MyPageAllBodyDiv> 
 
-      <S.MyPageBodyDiv>
         <S.MyPageTextDiv>
           <S.MyPageText>마이페이지</S.MyPageText>
         </S.MyPageTextDiv>
@@ -37,6 +37,8 @@ function Mypage() {
             <S.PasswordChange>비밀번호 변경</S.PasswordChange>
           </S.PasswordDiv>
       </S.MyPageBodyDiv>
+
+      </S.MyPageAllBodyDiv>
     </>
   );
 }
