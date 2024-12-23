@@ -1,3 +1,5 @@
+"use client"
+import { use } from 'react';
 import NavBar from '../components/NavBar';
 import * as S from '../styles/MyPageCss';
 
@@ -24,8 +26,16 @@ function Mypage() {
             <S.personalValue>1학년 1반</S.personalValue>
             <S.EmailText>이메일</S.EmailText>
             <S.personalValue>s24005@gsm.hs.kr</S.personalValue>
+            
+            <S.Button>
+             <S.ButtonText>수정</S.ButtonText>
+            </S.Button>
           </S.personalInformationDiv>
 
+          <S.PasswordDiv>
+            <S.PasswordText>비밀번호</S.PasswordText>
+            <S.PasswordChange>비밀번호 변경</S.PasswordChange>
+          </S.PasswordDiv>
       </S.MyPageBodyDiv>
     </>
   );

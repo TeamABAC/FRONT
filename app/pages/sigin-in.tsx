@@ -34,7 +34,7 @@ const handleSubmit=(e:any) => {
       <S.ImageSettion> 
       <S.Logo src="/logowhite.png" alt="로고" />
       <S.LoginWhite>
-          <S.LoginWhiteText>회원가입2</S.LoginWhiteText>
+          <S.LoginWhiteText>회원가입</S.LoginWhiteText>
       <S.EmailInput value={EmailValue} onChange={handleEmailChange} type="email" placeholder=' 이름'></S.EmailInput>
       <S.EmailInputText>이름</S.EmailInputText>
       <S.PasswordInput value={PasswordValue} onChange={handlePaawordChange} type='password' placeholder='학번'></S.PasswordInput>

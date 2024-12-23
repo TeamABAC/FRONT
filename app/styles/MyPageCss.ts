@@ -2,7 +2,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 export const MyPageBodyDiv = styled.div`
   width: 100%;
-  height: 900px;
+height:1000px;
   background: linear-gradient(180deg, #6092f2 0%, #295f9f 100%);
 `;
 
@@ -78,7 +78,7 @@ flex: none;
 flex-grow: 0;
 position:absolute;
 left:350px;
-top:510px;
+top:450px;
 padding-left:60px;
 padding-top:50px;
 `
@@ -122,13 +122,6 @@ height: 179px;
 `
 
 
-export const Button=styled.button`
-width: 82px;
-height: 48.43px;
-background: #003C82;
-border-radius: 40px;
-cursor:pointer;
-`
 
 export const Name=styled.span`
 font-family: 'Pretendard';
@@ -140,4 +133,59 @@ color: #000000;
 position:relative;
 left:600px;
 top:60px;
+`
+export const PasswordDiv=styled.div`
+width: 1020px;
+height: 195px;
+background: #FFFFFF;
+border-radius: 40px;
+position:absolute;
+left:350px;
+top:720px;
+padding-left:60px;
+padding-top:50px;
+
+`
+export const PasswordText=styled.span`
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 24px;
+color:#000000;
+position:relative;
+`
+
+export const Button=styled.button`
+width: 82px;
+height: 48.43px;
+background: #003C82;
+border-radius: 40px;
+cursor:pointer;
+position: absolute;
+right:40px;
+top: 40px;
+`
+export const ButtonText=styled.span`
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+color: #FFFFFF;
+display;flex;
+justify-center:center;
+align-items: center;
+text-align: center;
+
+`
+export const PasswordChange=styled.div`
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+color: #666666;
+cursor:pointer;
+margin-left:800px;
 `
