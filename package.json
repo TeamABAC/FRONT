@@ -10,8 +10,13 @@
   },
   "dependencies": {
     "axios": "^1.7.9",
+<<<<<<< HEAD
     "axois": "^0.0.1-security",
     "dotenv": "^16.4.7",
+=======
+    "dotenv": "^16.4.7",
+    "firebase": "^11.0.2",
+>>>>>>> d7573fc (충돌오류 해결)
     "next": "^15.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -19,8 +24,13 @@
   },
   "devDependencies": {
     "@types/node": "^20",
+<<<<<<< HEAD
     "@types/react": "^19",
     "@types/react-dom": "^19",
+=======
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+>>>>>>> d7573fc (충돌오류 해결)
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
