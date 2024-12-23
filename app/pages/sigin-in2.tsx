@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import * as S from '../style/singin-in2'
+import * as S from '../styles/singin-in2'
 import { useRouter } from "next/navigation";
 
 function sigin() {
