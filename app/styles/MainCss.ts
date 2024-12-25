@@ -13,7 +13,7 @@ export const BackgroundImage = styled.img`
 export const MainBodyDiv = styled.div`
   background-color: #f4f4f4;
   width: 100%;
-  height: 900px;
+  height: 700px;
   user-select: none;
   display: flex;
   justify-content: center;
