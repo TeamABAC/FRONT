@@ -196,8 +196,5 @@ export const myPassword = styled.input`
   height: 30px;
   font-size: 24px;
   
-  &:read-only {
-    background-color: white; 
-  };
 `
 

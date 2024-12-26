@@ -55,6 +55,10 @@ color: #000000;
 margin-top:100px;
 `
 export const NowpassIput=styled.input`
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
 background: #F4F4F4;
 border-radius: 10px;
 outline: none;
@@ -62,11 +66,8 @@ margin-top:20px;
 width:800px;
 height:65px;
 padding-left: 20px;
-&:focus 
-{
-  color: #000;
-  }
-  `
+color: black;
+`
   
   export const Nopasswordhap=styled.div`
   margin-left:110px;
@@ -85,6 +86,10 @@ padding-left: 20px;
 `
 
 export const NewInput=styled.input`
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
 background: #F4F4F4;
 border-radius: 10px;
 outline: none;
@@ -94,12 +99,13 @@ position:relative;
 left:110px;
 top:55px;
 padding-left: 20px;
-&:focus 
-{
-  color: #000;
-  }
+color: black;
 `  
 export const NewInputCheck=styled.input`
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
 background: #F4F4F4;
 border-radius: 10px;
 outline: none;
@@ -109,10 +115,8 @@ position:relative;
 left:110px;
 top:70px;
 padding-left: 20px;
-&:focus 
-{
-  color: #000;
-  }
+color: black;
+
 `
 
   export const Button=styled.button`
