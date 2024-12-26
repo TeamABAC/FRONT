@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
 export const MyPageBodyDiv = styled.div`
   width: 100%;
@@ -41,13 +41,11 @@ border-radius: 40px;
 order: 0;
 flex: none;
 flex-grow: 0;
-position:absolute;
-left:350px;
-top:260px;
 display:flex;
 align-items: center;
 padding-left: 60px;
 gap: 40px;
+margin-left: 350px;
 `
 
 export const QuantityText = styled.span`
@@ -76,11 +74,11 @@ border-radius: 40px;
 order: 1;
 flex: none;
 flex-grow: 0;
-position:absolute;
-left:350px;
-top:450px;
+position: relative;
 padding-left:60px;
 padding-top:50px;
+margin-left: 350px;
+margin-top: 30px;
 `
 
 export const ClassText = styled.div`
@@ -121,8 +119,6 @@ width: 248px;
 height: 179px;
 `
 
-
-
 export const Name=styled.span`
 font-family: 'Pretendard';
 font-style: normal;
@@ -139,12 +135,12 @@ width: 1020px;
 height: 195px;
 background: #FFFFFF;
 border-radius: 40px;
-position:absolute;
-left:350px;
-top:720px;
-padding-left:60px;
-padding-top:50px;
-
+margin-left: 350px;
+margin-top: 30px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+position: relative;
 `
 export const PasswordText=styled.span`
 font-family: 'Pretendard';
@@ -153,7 +149,9 @@ font-weight: 600;
 font-size: 32px;
 line-height: 24px;
 color:#000000;
-position:relative;
+position: absolute;
+top: 40px;
+left: 40px;
 `
 
 export const Button=styled.button`
@@ -187,7 +185,19 @@ font-size: 16px;
 line-height: 19px;
 color: #666666;
 cursor:pointer;
-margin-left:800px;
+margin-right: 60px;
 `
 
+export const myPassword = styled.input`
+  width: auto;
+  border: none;
+  color: black;
+  margin-left: 40px;
+  height: 30px;
+  font-size: 24px;
+  
+  &:read-only {
+    background-color: white; 
+  };
+`
 

@@ -2,12 +2,19 @@
 import { use } from 'react';
 import NavBar from '../components/NavBar';
 import * as S from '../styles/MyPageCss';
+import { useRouter } from 'next/navigation';
 
 function Mypage() {
+  const router = useRouter();
+
+  function goChange() {
+    router.push('/MyPagePassword');
+  }
+
   return (
     <>
       <NavBar />
-      <S.MyPageAllBodyDiv> 
+        <S.MyPageBodyDiv>
 
         <S.MyPageTextDiv>
           <S.MyPageText>마이페이지</S.MyPageText>
@@ -34,11 +41,10 @@ function Mypage() {
 
           <S.PasswordDiv>
             <S.PasswordText>비밀번호</S.PasswordText>
-            <S.PasswordChange>비밀번호 변경</S.PasswordChange>
+            <S.myPassword type='password' readOnly></S.myPassword>
+            <S.PasswordChange onClick={ goChange }>비밀번호 변경</S.PasswordChange>
           </S.PasswordDiv>
-      </S.MyPageBodyDiv>
-
-      </S.MyPageAllBodyDiv>
+        </S.MyPageBodyDiv>
     </>
   );
 }
