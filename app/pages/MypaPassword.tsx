@@ -2,8 +2,14 @@
 import {use} from 'react';
 import NavBar from '../components/NavBar';
 import * as S from '../styles/MypagePassword'
+import { useRouter } from 'next/navigation';
 
 function Mypage(){
+
+  const router = useRouter();
+  function changePassword() {
+    router.push('/MyPage');
+  }
 return(
 <>
   <NavBar/>
@@ -17,10 +23,10 @@ return(
       </S.Nopasswordhap>
      
       <S.NewpasswordText>비밀번호</S.NewpasswordText>
-   <S.NewInput placeholder='새 비밀번호' ></S.NewInput>
-   <S.NewInputCheck placeholder='새 비밀번호 확인 ' ></S.NewInputCheck>
+      <S.NewInput placeholder='새 비밀번호' ></S.NewInput>
+      <S.NewInputCheck placeholder='새 비밀번호 확인 ' ></S.NewInputCheck>
 
-      <S.Button >
+      <S.Button onClick={ changePassword }>
         <S.ButtonText>비밀번호 변경</S.ButtonText>
       </S.Button>
     </S.White> 
