@@ -21,7 +21,8 @@ function EveryData() {
           <S.listTopText absoluteLeft='600px'>건의 유형</S.listTopText>
           <S.listTopText absoluteLeft='780px'>건의 상태</S.listTopText>
         </S.listTop>
-
+        <S.Sample>ddd</S.Sample>
+        <br></br>
       </S.whiteDiv>
     </S.grayBackground>
     </>

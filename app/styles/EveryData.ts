@@ -4,6 +4,10 @@ export const grayBackground = styled.div `
 width: 100%x;
 height: 1270px;
 background: #F4F4F4;
+webkit-user-select: none;
+-moz-user-select: none;
+-ms-use-select: none;
+user-select: none;
 `
 
 export const whiteDiv = styled.div`
@@ -33,15 +37,13 @@ color: #000000;
 `
 
 export const listTop = styled.div`
-position: absolute;
-width: 900px;
+width: 1200px;
 height: 60px;
-top: 200px;
 background: #F4F4F4;
 border-bottom: 2px solid #000000;
 box-sizing: border-box;
-display:flex;
 align-items: center;
+justify-center:center;
 `
 
 interface listTopTextProps{
@@ -59,4 +61,13 @@ letter-spacing: -0.005em;
 color: #000000;
 position: absolute;
 left: ${({ absoluteLeft }) => absoluteLeft};
+`
+export const Sample=styled.div`
+width:897px;
+height:64px;
+background-color:#F4F4F4;
+position:relative;
+top:200px;
+
+
 `
