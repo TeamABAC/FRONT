@@ -1,9 +1,10 @@
+'use client'
 import styled  from "styled-components";
 
 
 export const MyPageBodyDiv = styled.div`
   width: 100%;
-  height:855px;
+  height:800px;
   background: linear-gradient(180deg, #6092f2 0%, #295f9f 100%);
   display:flex;
   justify-content: center;
@@ -23,7 +24,7 @@ top: 120px;
 
 export const White=styled.div`
 width: 1036px;
-height: 653px;
+height: 600px;
 background: #FFFFFF;
 box-shadow: 0px 3.16667px 7.91667px rgba(0, 0, 0, 0.25);
 border-radius: 40px 40px 0px 0px;
@@ -126,7 +127,7 @@ color: black;
   border-radius:16px;
   position:relative;
   left:430px;
-  top:200px;
+  top:120px;
   `
   
   export const ButtonText=styled.span`

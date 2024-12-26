@@ -36,12 +36,12 @@ export const listTop = styled.div`
 position: absolute;
 width: 900px;
 height: 60px;
-top: 200px;
 background: #F4F4F4;
 border-bottom: 2px solid #000000;
 box-sizing: border-box;
 display:flex;
 align-items: center;
+margin-top: 140px;
 `
 
 interface listTopTextProps{
