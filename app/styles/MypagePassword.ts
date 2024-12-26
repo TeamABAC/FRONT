@@ -107,7 +107,7 @@ width:800px;
 height:65px;
 position:relative;
 left:110px;
-top:70px;
+top:80px;
 padding-left: 20px;
 &:focus 
 {

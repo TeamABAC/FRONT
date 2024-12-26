@@ -4,8 +4,6 @@ import NavBar from '../components/NavBar';
 import * as S from '../styles/MypagePassword'
 
 function Mypage(){
-  
- 
 return(
 <>
   <NavBar/>
@@ -22,7 +20,7 @@ return(
    <S.NewInput placeholder='새 비밀번호' ></S.NewInput>
    <S.NewInputCheck placeholder='새 비밀번호 확인 ' ></S.NewInputCheck>
 
-      <S.Button>
+      <S.Button >
         <S.ButtonText>비밀번호 변경</S.ButtonText>
       </S.Button>
     </S.White> 
