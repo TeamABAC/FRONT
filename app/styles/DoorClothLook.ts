@@ -1,3 +1,4 @@
+
 import styled from "styled-components";
 
   export const Body=styled.div`
@@ -229,3 +230,4 @@ import styled from "styled-components";
   export const contentArea = styled.textarea`
   resize: none;
   `
+

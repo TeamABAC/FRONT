@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import NavBar from '../components/NavBar';
@@ -21,8 +19,7 @@ function EveryData() {
           <S.listTopText absoluteLeft='600px'>건의 유형</S.listTopText>
           <S.listTopText absoluteLeft='780px'>건의 상태</S.listTopText>
         </S.listTop>
-        <S.Sample>ddd</S.Sample>
-        <br></br>
+        <S.DDiv></S.DDiv>
       </S.whiteDiv>
     </S.grayBackground>
     </>

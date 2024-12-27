@@ -43,7 +43,7 @@ background: #F4F4F4;
 border-bottom: 2px solid #000000;
 box-sizing: border-box;
 align-items: center;
-justify-center:center;
+margin-top: 140px;
 `
 
 interface listTopTextProps{
@@ -62,12 +62,13 @@ color: #000000;
 position: absolute;
 left: ${({ absoluteLeft }) => absoluteLeft};
 `
-export const Sample=styled.div`
-width:897px;
-height:64px;
-background-color:#F4F4F4;
-position:relative;
-top:200px;
 
+export const DDiv = styled.div`
+    width: 900px;
+    height: 60px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px;
 
 `

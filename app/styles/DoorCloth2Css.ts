@@ -5,13 +5,13 @@ export const BackgroundColor = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 1890px;
+  height: 1840px;
 `;
 
 export const WhiteDiv = styled.div`
   background-color: white;
   width: 1048px;
-  height: 1800px;
+  height: 1750px;
   margin-top: 90px;
   position: relative;
   box-shadow: 0px 3.16667px 7.91667px rgba(0, 0, 0, 0.25);
@@ -181,8 +181,8 @@ export const InputText = styled.span<{ $top: string }>`
   top: ${({ $top }) => $top}; // $top을 사용
   font-family: 'Pretendard';
   font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 1000;
+  font-size: 24px;
   line-height: 24px;
   display: flex;
   align-items: center;
@@ -228,7 +228,7 @@ export const Checkbutton = styled.div`
   position: absolute;
   width: 237px;
   height: 56px;
-  top: 1680px;
+  top: 1600px;
   background: #003C82;
   border-radius: 9.5px;
   display: flex;
