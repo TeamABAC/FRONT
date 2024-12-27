@@ -20,9 +20,8 @@ function DoorCloth2() {
 
   useEffect(() => {
     // 컴포넌트가 마운트될 때 로컬 스토리지에서 공지사항을 가져옴
-    const doorClothData = JSON.parse(localStorage.getItem('doorcloth')) || [];
-    setsavedDoorcloth(doorClothData);
-  }, []);
+    const doorClothData = JSON.parse(localStorage.getItem('doorcloth') || '[]');
+    setsavedDoorcloth(doorClothData);  }, []);
   function handleOptionChange(e: React.ChangeEvent<HTMLInputElement>) {
     setSelectedOption(e.target.value); // 선택된 옵션 상태 업데이트
   }
