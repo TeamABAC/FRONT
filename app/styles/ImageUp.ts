@@ -27,7 +27,7 @@ export const FileInputLabel = styled.label`
   font-weight: 600;
   font-size: 20px;
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 10px 10px;
   background-color: #002b8a;
   color: white;
   border-radius: 5px; /* 레이블의 모든 모서리를 둥글게 설정 */
