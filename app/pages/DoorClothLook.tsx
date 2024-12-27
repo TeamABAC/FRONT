@@ -22,7 +22,7 @@ const router = useRouter();
               <S.DeleteButtonText>삭제</S.DeleteButtonText>
             </S.DeleteButton>
             <S.FixButton>
-              <S.FixButtonText>수정하기</S.FixButtonText>
+              <S.FixButtonText>수정하3기</S.FixButtonText>
             </S.FixButton>
           </S.ContentUp>
         <S.Content />
