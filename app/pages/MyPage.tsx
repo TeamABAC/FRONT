@@ -41,7 +41,7 @@ function Mypage() {
 
           <S.PasswordDiv>
             <S.PasswordText>비밀번호</S.PasswordText>
-            <S.myPassword type='password' readOnly></S.myPassword>
+            <S.myPassword type='password'></S.myPassword>
             <S.PasswordChange onClick={ goChange }>비밀번호 변경</S.PasswordChange>
           </S.PasswordDiv>
         </S.MyPageBodyDiv>

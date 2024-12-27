@@ -1,55 +1,74 @@
 'use client'
-import React, {useState} from 'react'
-import * as S from '../styles/signin-in'
-import { useRouter } from "next/navigation";
+import React, { useState, useEffect } from 'react';
+import * as S from '../styles/signin-in';
+import { useRouter } from 'next/navigation';
+import axios from 'axios';
 
-function sigin() {
-const router=useRouter();
-const [EmailValue,setEmailValue]=useState("");
-const [PasswordValue,setPasswordValue]=useState("");
-const JWT_EXPIRY_TIME=24*3600*1000;
+function Signin() {
+  const [userName, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const router = useRouter();
 
-
-const handlePaawordChange=(e:any) => {
-setPasswordValue(e.target.value);
-}
-const handleEmailChange=(e:any) => {
-  setEmailValue(e.target.value);
-}
-
-const handleSubmit=(e:any) => {
-  const dto={
-    email:EmailValue,
-    password:PasswordValue,
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('/api/register', {
+        userName,
+        password,
+        email,
+      });
+  
+      if (response.status === 201) {
+        console.log('Registration successful');
+        router.push('/Sigin2');
+      }
+    } catch (error) {
+      if (error.response) {
+        console.log(`Error: ${error.response.data.message}`);
+      } else {
+        console.error('Error:', error);
+      } 
+    }
   };
 
+  // ServerCheck as a component
+  useEffect(() => {
+    const checkServer = async () => {
+      try {
+        const response = await axios.get('/api/register');
+        console.log('Server response:', response.data);
+      } catch (error) {
+        if (error.response) {
+          console.error('Server error:', error.response.status, error.response.data);
+        } else {
+          console.error('Network error:', error.message);
+        }
+      }
+    };
 
-};
+    checkServer();
+  }, []); // Runs only once when the component loads
 
   return (
     <>
-      <S.ImageSettion> 
       <S.Logo src="/logowhite.png" alt="로고" />
+      <S.Background src="/background2.png" alt="배경" />
+
       <S.LoginWhite>
         <S.LoginWhiteText>회원가입</S.LoginWhiteText>
-        <S.EmailInput value={EmailValue} onChange={handleEmailChange} type="email" placeholder=' 이름'></S.EmailInput>
-        <S.EmailInputText>이름</S.EmailInputText>
-        <S.PasswordInput type='password' placeholder='학번'></S.PasswordInput>
-        <S.PasswordInputText>학번</S.PasswordInputText>
-      
-        <S.LoginButton>
-          <S.LoginButtonText>다음</S.LoginButtonText>
-        </S.LoginButton>
-      
+        <form onSubmit={handleSubmit}>
+          <S.EmailInputText>이메일</S.EmailInputText>
+          <S.EmailInput type="email" placeholder="이메일" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <S.PasswordInputText>학번</S.PasswordInputText>
+          <S.PasswordInput type="password" placeholder="학번" value={password} onChange={(e) => setPassword(e.target.value)}/>
+          <S.LoginButton>
+            <S.LoginButtonText>다음</S.LoginButtonText>
+          </S.LoginButton>
+        </form>
       </S.LoginWhite>
-      
-      <S.Background src='/background2.png' alt="배경">
-      </S.Background>
-      </S.ImageSettion>
     </>
-  )
+  );
 }
 
-export default sigin;
-
-
+export default Signin;

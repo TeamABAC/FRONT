@@ -60,3 +60,12 @@ color: #000000;
 position: absolute;
 left: ${({ absoluteLeft }) => absoluteLeft};
 `
+
+export const DDiv = styled.div`
+    width: 900px;
+    height: 60px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px;
+`

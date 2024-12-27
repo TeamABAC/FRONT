@@ -98,7 +98,7 @@ font-weight: 600;
 font-size: 24px;
 line-height: 24px;
 color: #000000;
-margin-top: 30px;
+margin-top: 30px; 
 `
 export const personalValue=styled.div`
 font-family: 'Pretendard';
@@ -177,15 +177,15 @@ align-items: center;
 text-align: center;
 
 `
-export const PasswordChange=styled.div`
-font-family: 'Pretendard';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 19px;
-color: #666666;
-cursor:pointer;
-margin-right: 60px;
+export const PasswordChange = styled.div`
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #666666;
+  cursor:pointer;
+  margin-right: 60px;
 `
 
 export const myPassword = styled.input`
@@ -195,6 +195,9 @@ export const myPassword = styled.input`
   margin-left: 40px;
   height: 30px;
   font-size: 24px;
-  
+  background: #F4F4F4;
+  border-radius: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
 `
 
