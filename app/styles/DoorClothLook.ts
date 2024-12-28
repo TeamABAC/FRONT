@@ -13,31 +13,31 @@ import styled from "styled-components";
   z-index:-1;
   `
 
-  export const White=styled.div`
-  background-color:#ffff;
-  width:100%;
-  height:1076px; 
-  position: absolute;
-  top: 270px;
-  border-radius: 100px 100px 0px 0px;
- -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
-  `
+    export const White=styled.div`
+    background-color:#ffff;
+    width:100%;
+    height:900px; 
+    position: absolute;
+    top: 270px;
+    border-radius: 100px 100px 0px 0px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    `
 
   export const Option=styled.div`
   background-color:#B0C4EB;
-  width:118.52px;
+  width:118px;
   height:56px;
   border-radius:20px;
-  position:relative;
-  left:230px;
-  top:-20px;
   display:flex;
   justify-content: center;
   align-items: center;
-  `
+  position:absolute;
+  top:-24px;
+  left: 210px;
+`
 
   export const OptionText=styled.span`
   font-family: 'Pretendard';
@@ -48,15 +48,11 @@ import styled from "styled-components";
   color: #FFFFFF;
   `
 
-  export const Text=styled.span`
-  color:#000;
-  margin-left:250px;
-  `
-
   export const Contenthap=styled.div`
-  position:relative;
+  position:absolute;
   left:230px;  
-  top:40px;
+  top:140px;
+
   `
 
   export const ContentUp=styled.div`
@@ -65,18 +61,21 @@ import styled from "styled-components";
   background-color: #ffffff; 
   width: 1049px; 
   height:81px;
+  display:flex;
+  align-items: center;
   `
 
-  export const Content=styled.textarea`
-  background-color: #ffff; 
-  display:flex;
-  width:1049px;
-  height:420px;
+  export const Content = styled.textarea`
+  background-color: #ffffff; /* 더 명확한 색상 코드 사용 */
+  width: 1049px;
+  height: 420px;
   resize: none;
-  font-color:#000000;
+  color: #000000; /* 잘못된 속성 제거 */
   border: solid 1px #000000;
-  color:#000000;
-  `
+  outline: none; /* 포커스 시 검정 테두리 제거 */
+  padding: 10px; /* 텍스트와 테두리 간 여백 추가 */
+  box-sizing: border-box; /* 테두리 포함한 크기 조정 */
+`;
 
   export const DeleteButton=styled.button`
   width: 60px;
@@ -125,7 +124,7 @@ import styled from "styled-components";
   width: 150px;
   height: 48px;
   left: calc(50% - 140px/2);
-  top: 620.3px;
+  top: 700px;
   border-color:#0171ED;
   border-style:solid;
   border-width:2px;

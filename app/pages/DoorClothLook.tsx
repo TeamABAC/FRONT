@@ -11,20 +11,21 @@ const router = useRouter();
   return (
   <>
     <NavBar />
-    <S.Background src={'doorclothes.png'}></S.Background>
+    <S.Background src={'doorclothes.png'} />
     <S.White>
       <S.Option>
         <S.OptionText>급식</S.OptionText>
       </S.Option>
       <S.Contenthap>
-          <S.ContentUp>
-            <S.DeleteButton>
-              <S.DeleteButtonText>삭제</S.DeleteButtonText>
-            </S.DeleteButton>
-            <S.FixButton>
-              <S.FixButtonText>수정하3기</S.FixButtonText>
-            </S.FixButton>
-          </S.ContentUp>
+        <S.ContentUp>
+          <S.DeleteButton>
+            <S.DeleteButtonText>삭제</S.DeleteButtonText>
+          </S.DeleteButton>
+
+          <S.FixButton>
+            <S.FixButtonText>수정하기</S.FixButtonText>
+          </S.FixButton>
+        </S.ContentUp>
         <S.Content />
       </S.Contenthap>
 
