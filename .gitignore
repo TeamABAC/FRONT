@@ -17,6 +17,50 @@
 
 # next.js
 /.next/
+out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Ignore package-lock.json
+package-lock.jso# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/.next/
 /out/
 
 # production
@@ -40,3 +84,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+tsconfig.tsbuildinfo
+tsconfig.json
+tailwind.config.ts
+package.json
+package-lock.json
+
+
+
+# 기타 프로젝트 파일 (필요한 경우)
+tailwind.config.ts
+page.tsx
+README.md
+next.config.ts
+next.config.mjs
+postcss.config.mjs
