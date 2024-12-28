@@ -88,11 +88,10 @@ next-env.d.ts
 tsconfig.tsbuildinfo
 tsconfig.json
 tailwind.config.ts
-postcss.config.mjs
 package.json
 package-lock.json
-next.config.ts
-next.config.mjs
+
+
 
 # 기타 프로젝트 파일 (필요한 경우)
 tailwind.config.ts
