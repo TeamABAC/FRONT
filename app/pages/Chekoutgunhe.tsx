@@ -3,12 +3,14 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import NavBar from '../components/NavBar';
 import * as S from "../styles/Chekoutgunhe";
+import GlobalStyle from '../components/GlobalStyle'; 
 function App() {
 
 
   return (
 <>
-    <NavBar/>
+  <GlobalStyle />
+  <NavBar/>
   <S.Background>
     <S.Mygunheimporm>나의 건의 목록</S.Mygunheimporm>
     <S.White>
@@ -38,19 +40,23 @@ function App() {
             <S.JubsuImage src={'BlueJupsu.png'}></S.JubsuImage>
             <S.JubsuText>접수</S.JubsuText>
           </S.Jubsu>
+          <S.Nemo />
           <S.Serch>
             <S.SerchImage src={'BlueSerch.png'}></S.SerchImage>
             <S.SerchText>검토</S.SerchText>
           </S.Serch>
+          <S.Nemo />
           <S.Check>
             <S.CheckImage src={'BlueCheck.png'}></S.CheckImage>
             <S.CheckText>최종결과</S.CheckText>
           </S.Check>
+          <S.Nemo />
           <S.Run>
             <S.RunImage src={'BlueRun.png'}></S.RunImage>
             <S.RunText>건의실행</S.RunText>
           </S.Run>
         </S.Icons>
+       
     </S.White>
   </S.Background>
   </>

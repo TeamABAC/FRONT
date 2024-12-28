@@ -1,6 +1,19 @@
 import styled from "styled-components";
 
 
+export const Background=styled.div`
+width:100%;
+height:855px;
+background-color:#f4f4f4;
+display:flex;
+justify-content:center;
+align-items:center;
+ -webkit-user-select:all;
+  -moz-user-select:all;
+  -ms-user-select:all;
+  user-select:all
+`
+
 export const Mygunheimporm=styled.span`
 font-family: 'Pretendard';
 font-style: normal;
@@ -11,17 +24,6 @@ color: #666666;
 position:relative;
 bottom:380px;
 left:130px;
-
-`
-
-export const Background=styled.div`
-width:100%;
-height:855px;
-background-color:#f4f4f4;
-display:flex;
-justify-content:center;
-align-items:center;
-
 `
 
 export const White= styled.section`
@@ -110,8 +112,8 @@ top:220px;
 export const Icons=styled.div`
 display: flex;
 align-items: center;
-gap:200px;
-margin-left:100px;
+gap:10px;
+margin-left:120px;
 margin-top:260px;  
 `
 
@@ -193,8 +195,15 @@ position:relative;
 left:2px;
 top:22px;
 `
+
 export const Dasi=styled.div`
 weight:158px;
+height:4px;
+background-color:#4A88D0;
+`
+
+export const Nemo=styled.div`
+width:158px;
 height:4px;
 background-color:#4A88D0;
 `
