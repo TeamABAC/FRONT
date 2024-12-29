@@ -22,6 +22,9 @@ function NavBar() {
   function goToEveryData() {
     router.push('/EveryData');
   }
+  function goToLogin(){
+    router.push('Login');
+  }
 
   return (
     <>
@@ -35,8 +38,8 @@ function NavBar() {
           <S.NavTexts onClick={goToMyPage}>마이페이지</S.NavTexts>  
         </S.NavText>
 
-        <S.NavLogOut>
-          <S.NavLogOutText>로그아웃</S.NavLogOutText>
+        <S.NavLogOut onClick={goToLogin}>
+          <S.NavLogOutText>로그인</S.NavLogOutText>
         </S.NavLogOut>
       </S.NavTmfdiv>
     </>

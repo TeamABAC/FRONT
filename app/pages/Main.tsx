@@ -70,7 +70,12 @@ function handleSubmit() {
   function goToEveryData() {
     if (!noticeShow) router.push('/EveryData');
   }
-
+  
+  
+  function goToResultGunhe(){
+    if (!noticeShow) router.push('/ResultGunhe');
+    
+  }
   function toggleNotice() {
     setNoticeShow(!noticeShow);
   }
@@ -140,7 +145,7 @@ function handleSubmit() {
             <S.MenuText>건의 게시판</S.MenuText>
           </S.MainMenus>
 
-          <S.MainMenus>
+          <S.MainMenus onClick={goToResultGunhe}>
             <S.MenuIconBlue>
               <S.MenuIcon src={'/icon2.png'} alt="아이콘2" />
             </S.MenuIconBlue>
@@ -149,7 +154,7 @@ function handleSubmit() {
 
           <S.MainMenus onClick={gotoMypage}>
             <S.MenuIconBlue>
-              <S.MenuIcon src={'/icon2.png'} alt="아이콘2" />
+              <S.MenuIcon src={'/Mypageicon.svg'} alt="아이콘2" />
             </S.MenuIconBlue>
             <S.MenuText>마이페이지</S.MenuText>
           </S.MainMenus>

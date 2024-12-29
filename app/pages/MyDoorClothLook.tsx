@@ -43,17 +43,30 @@ function MyDoorClothLook() {
       body: noticeBody,
     };
 
+    
     // 새로운 공지사항을 배열의 맨 앞에 추가
     const updatedNotices = [noticeData, ...savedNotices];
     localStorage.setItem('notices', JSON.stringify(updatedNotices));
-
+    
     // 상태 초기화
     setSavedNotices(updatedNotices);
     setNoticeTitle('');
     setNoticeBody('');
     setNoticeShow(false);
   }
-
+  function DeleteOnclick() {
+    // 삭제 확인 메시지
+    const confirmDelete = window.confirm('정말 삭제하시겠습니까?');
+    
+    if (confirmDelete) {
+      // 확인 버튼 클릭 시
+      alert('삭제하였습니다');
+      // 여기에 실제 삭제 로직 추가
+    } else {
+      // 취소 버튼 클릭 시 (필요 시 여기에 추가 동작 구현 가능)
+    }
+  }
+  
   return (
     <>
       <NavBar />
@@ -66,7 +79,7 @@ function MyDoorClothLook() {
         <S.Contenthap>
           <S.ContentUp>
             
-            <S.DeleteButton>
+            <S.DeleteButton onClick={DeleteOnclick}>
               <S.DeleteButtonText>삭제</S.DeleteButtonText>
             </S.DeleteButton>
             

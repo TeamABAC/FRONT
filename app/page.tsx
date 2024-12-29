@@ -10,7 +10,7 @@ import MygunheList from './pages/MygunheList'
 import EveryData from './pages/EveryData'
 import MyDoorClothLook from './pages/MyDoorClothLook'
 const HomePage: React.FC = () => {
-  return <MyDoorClothLook />;
+  return <Main />;
 };
 
 export default HomePage;

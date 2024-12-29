@@ -11,7 +11,7 @@ function EveryData() {
 
     function MygunhelistOnclick()
     {
-    router.push('./MygunheList');
+    router.push('./MyDoorClothLook');
     
     }
     function DoorClothLookOnclick()

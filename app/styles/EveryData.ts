@@ -103,6 +103,6 @@ align-items: center;
 width: 100%;  
 position: relative;
 right: 608px;
-bottom:290px;
+bottom:280px;
 cursor:pointer;
 `
