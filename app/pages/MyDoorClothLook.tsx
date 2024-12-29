@@ -21,8 +21,10 @@ function MyDoorClothLook() {
   }
 
   useEffect(() => {
-    const noticeData = JSON.parse(localStorage.getItem('notices') || '[]');
-    setSavedNotices(noticeData);
+    if (typeof window !== 'undefined') {
+      const noticeData = JSON.parse(localStorage.getItem('notices') || '[]');
+      setSavedNotices(noticeData);
+    }
   }, []);
 
   useEffect(() => {
@@ -85,7 +87,9 @@ function MyDoorClothLook() {
               <S.FixButton>
                 <S.FixButtonText>수정하기</S.FixButtonText>
               </S.FixButton>
-              <S.Content>{notice.title}: {notice.body}</S.Content>
+              <S.Content>
+                {notice.title}: {notice.body}
+              </S.Content>
             </S.ContentUp>
           ))}
         </S.Contenthap>
