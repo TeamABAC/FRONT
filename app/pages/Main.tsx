@@ -149,7 +149,7 @@ function handleSubmit() {
             <S.MenuIconBlue>
               <S.MenuIcon src={'/icon2.png'} alt="아이콘2" />
             </S.MenuIconBlue>
-            <S.MenuText>결과 조회</S.MenuText>
+            <S.MenuText>나의 건의</S.MenuText>
           </S.MainMenus>
 
           <S.MainMenus onClick={gotoMypage}>
