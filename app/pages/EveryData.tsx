@@ -38,7 +38,7 @@ function EveryData() {
               <S.Td absoluteLeft='45px '>1</S.Td>
               <S.Td absoluteLeft='160px'>24.08.02 21:45</S.Td>
               <S.Td absoluteLeft='360px'>의자가 고장이 났어요</S.Td>
-              <S.Td absoluteLeft='620px'>기타</S.Td>
+              <S.Td absoluteLeft='620px'>시설관리</S.Td>
               <S.Td absoluteLeft='790px'>검토중</S.Td>
 
         </S.Sample>

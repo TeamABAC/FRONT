@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Background=styled.div`
 width:100%;
-height:855px;
+height:985px;
 background-color:#f4f4f4;
 display:flex;
 justify-content:center;
@@ -28,7 +28,7 @@ left:130px;
 
 export const White= styled.section`
 width: 1036px;
-height: 692px;
+height: 850px;
 background-color:#ffff;
 border-radius:40px;
 position:relative;
@@ -206,4 +206,33 @@ export const Nemo=styled.div`
 width:158px;
 height:4px;
 background-color:#4A88D0;
+`
+
+export const Result=styled.div`
+position:relative;
+left:70px;
+top:100px;
+`
+
+export const ResultText=styled.span`
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+color: #444444;
+`
+
+export const ResultsebuText=styled.span`
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+display: flex;
+align-items: center;
+letter-spacing: -0.005em;
+color: #000000;
+position:relative;
+top:20px;
 `

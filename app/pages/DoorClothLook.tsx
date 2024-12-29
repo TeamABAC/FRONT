@@ -63,8 +63,12 @@ function Seegunhe() {
           <S.OptionText>급식</S.OptionText>
         </S.Option>
         <S.Contenthap>
-          <S.ContentUp />
-          <S.Content />
+          <S.ContentUp >
+            <S.Texte>유은서| 24.08.02 21:45</S.Texte>
+          </S.ContentUp>
+          <S.Content>
+            <S.Texte>급식에 이상한것이 나왔어요</S.Texte>
+          </S.Content>
         </S.Contenthap>
         <S.Goodbutton>
           <S.GoodImage src={'Good.svg'} />

@@ -28,8 +28,8 @@ function App() {
           <tbody>
             <tr>
               <S.Td>24.08.02 21:45</S.Td>
-              <S.Td>치킨치킨 읭 치킨</S.Td>
-              <S.Td>기타</S.Td>
+              <S.Td>의자가 고장이 났어요</S.Td>
+              <S.Td>시설관리</S.Td>
               <S.Td>김홍준</S.Td>
              </tr>
           </tbody>
@@ -56,7 +56,13 @@ function App() {
             <S.RunText>건의실행</S.RunText>
           </S.Run>
         </S.Icons>
-       
+        <S.Result>
+            <S.ResultText>건의 결과 검토: 의견 부분적 수용</S.ResultText>
+            <S.ResultsebuText>
+              저희 팀의 검토 및 사감 선생님과 회의에 따라 박서현님의 건의는 실현 가능성이 낮다고
+              판결이 내렸습니다.
+            </S.ResultsebuText>
+          </S.Result>
     </S.White>
   </S.Background>
   </>
