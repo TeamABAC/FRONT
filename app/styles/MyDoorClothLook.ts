@@ -37,7 +37,7 @@ import styled from "styled-components";
   position:absolute;
   top:-24px;
   left: 210px;
-`
+  `
 
   export const OptionText=styled.span`
   font-family: 'Pretendard';
@@ -54,6 +54,16 @@ import styled from "styled-components";
   top:140px;
   `
 
+  export const ContentUp=styled.div`
+  border: 1px solid #000;
+  padding: 16px; 
+  background-color: #ffffff; 
+  width: 1049px; 
+  height:81px;
+  display:flex;
+  align-items: center;
+  `
+
   export const Content = styled.textarea`
   background-color: #ffffff; /* 더 명확한 색상 코드 사용 */
   width: 1049px;
@@ -66,16 +76,44 @@ import styled from "styled-components";
   box-sizing: border-box; /* 테두리 포함한 크기 조정 */
   `;
 
-  export const ContentUp=styled.div`
-  border: 1px solid #000;
-  padding: 16px; 
-  background-color: #ffffff; 
-  width: 1049px; 
-  height:81px;
-  display:flex;
-  align-items: center;
+  export const DeleteButton=styled.button`
+  width: 60px;
+  height: 30px;
+  background: #FFFFFF;
+  border: 0.75px solid #EB4545;
+  border-radius: 3px;
+  position:relative;
+  left:840px;
   `
-  
+
+  export const DeleteButtonText=styled.span`
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;  
+  `
+
+  export const FixButton=styled.button`
+  width: 60px;
+  height: 30px;
+  background: #FFFFFF;
+  border: 0.75px solid #000000;
+  border-radius: 3px;
+  position:relative;
+  left:860px;
+  `
+
+  export const FixButtonText=styled.span`
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;  
+  `
+
   export const Goodbutton=styled.button`
   flex-direction: row;
   display: flex;
@@ -85,7 +123,7 @@ import styled from "styled-components";
   position: absolute;
   width: 150px;
   height: 48px;
-  left: calc(50% - 140px/2);
+  left: 580px;
   top: 700px;
   border-color:#0171ED;
   border-style:solid;
@@ -113,6 +151,43 @@ import styled from "styled-components";
   color: #000000;
   `
 
+  export const Checkbutton=styled.button`
+   flex-direction: row;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  position: absolute;
+  width: 150px;
+  height: 48px;
+  left: 790px;
+  top: 700px;
+  border-color:#0171ED;
+  border-style:solid;
+  border-width:2px;
+  border-radius:16px;
+  justify-content:center;
+  align-items:center;
+  `
+  
+  export const CheckImag=styled.img`
+  width:20px;
+  height:20px;
+  `
+
+  export const CheckText=styled.span`
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 17px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  `
+
   export const NewText=styled.span`
   font-family: 'Pretendard';
   font-style: normal;
@@ -128,9 +203,9 @@ import styled from "styled-components";
   letter-spacing: -0.005em;
   position:relative;
   `
-
-  export const List=styled.div``
-
+  
+  export const List=styled.div` `
+  
   export const Sample=styled.div`
   width:1048px;
   height:50px;
@@ -139,7 +214,7 @@ import styled from "styled-components";
   left:30px;
   display:flex;
   `
-
+  
   export const SampleText=styled.span`
   font-family: 'Pretendard';
   font-style: normal;
@@ -150,7 +225,7 @@ import styled from "styled-components";
   position:relative;
   left:300px;
   `
-
+  
   export const Option2=styled.div`
   width: 50px;
   height: 25px;
@@ -162,7 +237,6 @@ import styled from "styled-components";
   position:relative;
   left:180px;
   `
-
 
   export const Option2Text=styled.span`
   font-family: 'Pretendard';
