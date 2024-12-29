@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import NavBar from '../components/NavBar';
 import * as S from '../styles/MygunheList';
 import GlobalStyle from '../components/GlobalStyle'
-function EveryData() {
+function MygunheList() {
     const router = useRouter();
 
     function handleOnclick()
@@ -40,4 +40,4 @@ function EveryData() {
   )
 }
 
-export default EveryData
+export default MygunheList

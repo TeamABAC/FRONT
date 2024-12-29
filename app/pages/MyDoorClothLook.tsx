@@ -2,9 +2,9 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import NavBar from '../components/NavBar';
-import * as S from '../styles/DoorClothLook';
+import * as S from '../styles/MyDoorClothLook';
 
-function Seegunhe() {
+function MyDoorClothLook() {
   const [noticeShow, setNoticeShow] = useState(false);
   const noticeRef = useRef<HTMLDivElement | null>(null);
 
@@ -62,17 +62,32 @@ function Seegunhe() {
         <S.Option>
           <S.OptionText>급식</S.OptionText>
         </S.Option>
+
         <S.Contenthap>
-          <S.ContentUp />
+          <S.ContentUp>
+            
+            <S.DeleteButton>
+              <S.DeleteButtonText>삭제</S.DeleteButtonText>
+            </S.DeleteButton>
+            
+            <S.FixButton>
+              <S.FixButtonText>수정하기</S.FixButtonText>
+            </S.FixButton>
+          </S.ContentUp>
           <S.Content />
         </S.Contenthap>
+
         <S.Goodbutton>
           <S.GoodImage src={'Good.svg'} />
           <S.GoodText>추천</S.GoodText>
         </S.Goodbutton>
+        <S.Checkbutton>
+          <S.CheckImag src={'Checkimg.svg'}/>
+          <S.CheckText>조회</S.CheckText>
+        </S.Checkbutton>
       </S.White>
     </>
   );
 }
 
-export default Seegunhe;
+export default MyDoorClothLook;
