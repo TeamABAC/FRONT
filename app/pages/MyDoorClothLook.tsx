@@ -2,9 +2,9 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import NavBar from '../components/NavBar';
-import * as S from '../styles/DoorClothLook';
+import * as S from '../styles/MyDoorClothLook';
 
-function Seegunhe() {
+function MyDoorClothLook() {
   const [noticeShow, setNoticeShow] = useState(false);
   const noticeRef = useRef<HTMLDivElement | null>(null);
 
@@ -43,17 +43,30 @@ function Seegunhe() {
       body: noticeBody,
     };
 
+    
     // 새로운 공지사항을 배열의 맨 앞에 추가
     const updatedNotices = [noticeData, ...savedNotices];
     localStorage.setItem('notices', JSON.stringify(updatedNotices));
-
+    
     // 상태 초기화
     setSavedNotices(updatedNotices);
     setNoticeTitle('');
     setNoticeBody('');
     setNoticeShow(false);
   }
-
+  function DeleteOnclick() {
+    // 삭제 확인 메시지
+    const confirmDelete = window.confirm('정말 삭제하시겠습니까?');
+    
+    if (confirmDelete) {
+      // 확인 버튼 클릭 시
+      alert('삭제하였습니다');
+      // 여기에 실제 삭제 로직 추가
+    } else {
+      // 취소 버튼 클릭 시 (필요 시 여기에 추가 동작 구현 가능)
+    }
+  }
+  
   return (
     <>
       <NavBar />
@@ -62,17 +75,32 @@ function Seegunhe() {
         <S.Option>
           <S.OptionText>급식</S.OptionText>
         </S.Option>
+
         <S.Contenthap>
-          <S.ContentUp />
+          <S.ContentUp>
+            
+            <S.DeleteButton onClick={DeleteOnclick}>
+              <S.DeleteButtonText>삭제</S.DeleteButtonText>
+            </S.DeleteButton>
+            
+            <S.FixButton>
+              <S.FixButtonText>수정하기</S.FixButtonText>
+            </S.FixButton>
+          </S.ContentUp>
           <S.Content />
         </S.Contenthap>
+
         <S.Goodbutton>
           <S.GoodImage src={'Good.svg'} />
           <S.GoodText>추천</S.GoodText>
         </S.Goodbutton>
+        <S.Checkbutton>
+          <S.CheckImag src={'Checkimg.svg'}/>
+          <S.CheckText>조회</S.CheckText>
+        </S.Checkbutton>
       </S.White>
     </>
   );
 }
 
-export default Seegunhe;
+export default MyDoorClothLook;

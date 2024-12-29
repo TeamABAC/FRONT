@@ -1,16 +1,18 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+
+import React, { useState, useEffect, useRef } from 'react';
 import * as S from '../styles/signin-in';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 
 function Signin() {
+  const router = useRouter();
+
   const [userName, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
-  const router = useRouter();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       const response = await axios.post('/api/register', {
@@ -18,7 +20,7 @@ function Signin() {
         password,
         email,
       });
-  
+
       if (response.status === 201) {
         console.log('Registration successful');
         router.push('/Sigin2');
@@ -28,27 +30,9 @@ function Signin() {
         console.log(`Error: ${error.response.data.message}`);
       } else {
         console.error('Error:', error);
-      } 
+      }
     }
   };
-
-  // ServerCheck as a component
-  useEffect(() => {
-    const checkServer = async () => {
-      try {
-        const response = await axios.get('/api/register');
-        console.log('Server response:', response.data);
-      } catch (error) {
-        if (error.response) {
-          console.error('Server error:', error.response.status, error.response.data);
-        } else {
-          console.error('Network error:', error.message);
-        }
-      }
-    };
-
-    checkServer();
-  }, []); // Runs only once when the component loads
 
   return (
     <>
@@ -59,9 +43,19 @@ function Signin() {
         <S.LoginWhiteText>회원가입</S.LoginWhiteText>
         <form onSubmit={handleSubmit}>
           <S.EmailInputText>이메일</S.EmailInputText>
-          <S.EmailInput type="email" placeholder="이메일" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <S.EmailInput 
+            type="email" 
+            placeholder="이메일" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+          />
           <S.PasswordInputText>학번</S.PasswordInputText>
-          <S.PasswordInput type="password" placeholder="학번" value={password} onChange={(e) => setPassword(e.target.value)}/>
+          <S.PasswordInput 
+            type="password" 
+            placeholder="학번" 
+            value={password} 
+            onChange={(e) => setPassword(e.target.value)} 
+          />
           <S.LoginButton>
             <S.LoginButtonText>다음</S.LoginButtonText>
           </S.LoginButton>

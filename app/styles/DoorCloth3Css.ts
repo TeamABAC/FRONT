@@ -132,8 +132,6 @@ export const RacunImage = styled.img`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 350px;
-  height: 300px;
   position: absolute;
   top: 700px;
 `;

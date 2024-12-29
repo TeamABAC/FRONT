@@ -38,7 +38,7 @@ function Endgunhe() {
           <S.CongraturationMessage>
             작성 완료! 2~3일 이내에 메일이 갈 꺼라굿~!
           </S.CongraturationMessage>
-          <S.RacunImage src={'/RacunHappy.png'} />
+          <S.RacunImage src={'/HappyGuriGuri.png'} />
 
           <S.Mainbutton>
             <S.MainText onClick={goToMainPage}>메인으로 가기</S.MainText>
