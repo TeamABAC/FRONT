@@ -25,6 +25,9 @@ function NavBar() {
   function goToLogin(){
     router.push('Login');
   }
+  function gotoCheckgunhe(){
+    router.push('/MygunheList')
+  }
 
   return (
     <>
@@ -34,12 +37,12 @@ function NavBar() {
         <S.NavText>
           <S.NavTexts onClick={goToDoor1Page}>건의 작성</S.NavTexts>
           <S.NavTexts onClick={goToEveryData}>건의 게시판 </S.NavTexts>
-          <S.NavTexts>나의 건의</S.NavTexts>
+          <S.NavTexts  onClick={gotoCheckgunhe}>나의 건의</S.NavTexts>
           <S.NavTexts onClick={goToMyPage}>마이페이지</S.NavTexts>  
         </S.NavText>
 
-        <S.NavLogOut onClick={goToLogin}>
-          <S.NavLogOutText>로그인</S.NavLogOutText>
+        <S.NavLogOut>
+          <S.NavLogOutText>로그아웃</S.NavLogOutText>
         </S.NavLogOut>
       </S.NavTmfdiv>
     </>

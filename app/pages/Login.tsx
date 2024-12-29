@@ -39,20 +39,7 @@ function Login() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [noticeShow]);
 
-  function handleSubmit() {
-    const noticeData: savedNotice = {
-      title: noticeTitle,
-      body: noticeBody,
-    };
-
-    const updatedNotices = [noticeData, ...savedNotices];
-    localStorage.setItem('notices', JSON.stringify(updatedNotices));
-
-    setSavedNotices(updatedNotices);
-    setNoticeTitle('');
-    setNoticeBody('');
-    setNoticeShow(false);
-  }
+ 
 
   function gotoSignIn() {
     router.push('/sign-in');

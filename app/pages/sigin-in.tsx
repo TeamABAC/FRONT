@@ -6,8 +6,14 @@ import { useRouter } from 'next/navigation';
 import axios from 'axios';
 
 function Signin() {
-  const router = useRouter();
-
+  const router = useRouter(); 
+  const [noticeShow, setNoticeShow] = useState(false);
+  const noticeRef = useRef<HTMLDivElement | null>(null);
+  
+  const [noticeTitle, setNoticeTitle] = useState('');
+  const [noticeBody, setNoticeBody] = useState('');
+  const [savedNotices, setSavedNotices] = useState<savedNotice[]>([]);
+  
   const [userName, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
@@ -33,6 +39,33 @@ function Signin() {
       }
     }
   };
+
+
+
+  interface savedNotice {
+    title: string;
+    body: string;
+  }
+
+  useEffect(() => {
+    // 로컬 스토리지에서 공지사항을 가져옴
+    const noticeData = JSON.parse(localStorage.getItem('notices') || '[]');
+    setSavedNotices(noticeData);
+  }, []);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (noticeRef.current && !noticeRef.current.contains(event.target as Node)) {
+        setNoticeShow(false);
+      }
+    }
+    if (noticeShow) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [noticeShow]);
 
   return (
     <>

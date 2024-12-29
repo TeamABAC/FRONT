@@ -189,3 +189,9 @@ import styled from "styled-components";
   export const contentArea = styled.textarea`
   resize: none;
   `
+
+  export const Texte=styled.span`
+  color:#000;
+  position:relative;
+  left:50px;
+  `

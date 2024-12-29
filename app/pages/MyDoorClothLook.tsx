@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import NavBar from '../components/NavBar';
 import * as S from '../styles/MyDoorClothLook';
 
@@ -12,13 +13,14 @@ function MyDoorClothLook() {
   const [noticeBody, setNoticeBody] = useState('');
   const [savedNotices, setSavedNotices] = useState<savedNotice[]>([]);
 
+  const router = useRouter();
+
   interface savedNotice {
     title: string;
     body: string;
   }
 
   useEffect(() => {
-    // 로컬 스토리지에서 공지사항을 가져옴
     const noticeData = JSON.parse(localStorage.getItem('notices') || '[]');
     setSavedNotices(noticeData);
   }, []);
@@ -26,76 +28,74 @@ function MyDoorClothLook() {
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (noticeRef.current && !noticeRef.current.contains(event.target as Node)) {
-        setNoticeShow(false); // 공지사항 외부 클릭 시 닫힘
+        setNoticeShow(false);
       }
     }
+
     if (noticeShow) {
       document.addEventListener('mousedown', handleClickOutside);
     } else {
       document.removeEventListener('mousedown', handleClickOutside);
     }
+
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [noticeShow]);
 
   function handleSubmit() {
-    const noticeData: savedNotice = {
-      title: noticeTitle,
-      body: noticeBody,
-    };
+    const noticeData: savedNotice = { title: noticeTitle, body: noticeBody };
 
-    
-    // 새로운 공지사항을 배열의 맨 앞에 추가
     const updatedNotices = [noticeData, ...savedNotices];
     localStorage.setItem('notices', JSON.stringify(updatedNotices));
-    
-    // 상태 초기화
+
     setSavedNotices(updatedNotices);
     setNoticeTitle('');
     setNoticeBody('');
     setNoticeShow(false);
   }
-  function DeleteOnclick() {
-    // 삭제 확인 메시지
+
+  function handleDelete(index: number) {
     const confirmDelete = window.confirm('정말 삭제하시겠습니까?');
-    
     if (confirmDelete) {
-      // 확인 버튼 클릭 시
-      alert('삭제하였습니다');
-      // 여기에 실제 삭제 로직 추가
-    } else {
-      // 취소 버튼 클릭 시 (필요 시 여기에 추가 동작 구현 가능)
+      const updatedNotices = savedNotices.filter((_, i) => i !== index);
+      localStorage.setItem('notices', JSON.stringify(updatedNotices));
+      setSavedNotices(updatedNotices);
+      alert('삭제하였습니다.');
     }
   }
-  
+
+  function gotoResult() {
+    router.push('/Checkoutgunhe');
+  }
+
   return (
     <>
       <NavBar />
-      <S.Background src={'doorclothes.png'} />
+      <S.Background src="doorclothes.png" />
       <S.White>
         <S.Option>
           <S.OptionText>급식</S.OptionText>
         </S.Option>
 
         <S.Contenthap>
-          <S.ContentUp>
-            
-            <S.DeleteButton onClick={DeleteOnclick}>
-              <S.DeleteButtonText>삭제</S.DeleteButtonText>
-            </S.DeleteButton>
-            
-            <S.FixButton>
-              <S.FixButtonText>수정하기</S.FixButtonText>
-            </S.FixButton>
-          </S.ContentUp>
-          <S.Content />
+          {savedNotices.map((notice, index) => (
+            <S.ContentUp key={index}>
+              <S.DeleteButton onClick={() => handleDelete(index)}>
+                <S.DeleteButtonText>삭제</S.DeleteButtonText>
+              </S.DeleteButton>
+              <S.FixButton>
+                <S.FixButtonText>수정하기</S.FixButtonText>
+              </S.FixButton>
+              <S.Content>{notice.title}: {notice.body}</S.Content>
+            </S.ContentUp>
+          ))}
         </S.Contenthap>
 
         <S.Goodbutton>
-          <S.GoodImage src={'Good.svg'} />
+          <S.GoodImage src="Good.svg" />
           <S.GoodText>추천</S.GoodText>
         </S.Goodbutton>
-        <S.Checkbutton>
-          <S.CheckImag src={'Checkimg.svg'}/>
+        <S.Checkbutton onClick={gotoResult}>
+          <S.CheckImag src="Checkimg.svg" />
           <S.CheckText>조회</S.CheckText>
         </S.Checkbutton>
       </S.White>
