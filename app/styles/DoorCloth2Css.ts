@@ -1,5 +1,5 @@
 import styled from "styled-components";
- 
+
 export const BackgroundColor = styled.div`
   background-color: #f4f4f4;
   width: 100%;
@@ -62,7 +62,7 @@ export const RoundOne = styled.div`
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3.5px solid;
+  border: 3px solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,7 +74,7 @@ export const RoundTwo = styled.div`
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3.5px solid;
+  border: 3px solid;
   display: flex;
   justify-content: center;
   align-items: center;
