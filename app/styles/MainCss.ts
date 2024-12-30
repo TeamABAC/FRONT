@@ -18,7 +18,9 @@ export const MainBodyDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
+  left: 0px;
+  right: 0px;
 `;
 
 export const plusNoticebutton = styled.div`

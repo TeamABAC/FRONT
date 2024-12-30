@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 export const MyPageBodyDiv = styled.div`
+  position:absolute;
+  left: 0px;
+  right: 0px;  
   width: 100%;
-height:1000px;
+  height:1000px;
   background: linear-gradient(180deg, #6092f2 0%, #295f9f 100%);
 `;
 
@@ -11,8 +14,8 @@ export const MyPageTextDiv = styled.div`
   position: absolute;
   width: 281px;
   height: 80px;
-  left: 98px;
-  top: 152px;
+  left: 90px;
+  top: 60px;
   background: #ffffff;
   border: 1px solid #a9bad1;
   border-radius: 16px;
@@ -141,6 +144,7 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 position: relative;
+padding-left:60px;
 `
 export const PasswordText=styled.span`
 font-family: 'Pretendard';
@@ -192,7 +196,6 @@ export const myPassword = styled.input`
   width: auto;
   border: none;
   color: black;
-  margin-left: 40px;
   height: 30px;
   font-size: 24px;
   background: #F4F4F4;
