@@ -7,8 +7,8 @@ import { useRouter } from 'next/navigation';
 function Signin() {
   const router = useRouter(); 
 
-  function nextSigin() {
-    router.push('/Sigin2');
+  function goMain() {
+    router.push('/Main');
   }
 
   return (
@@ -23,9 +23,9 @@ function Signin() {
           <S.EmailInputText>이메일</S.EmailInputText>
           <S.EmailInput type="email" placeholder="이메일"/>
           <S.classNumberInputText>학번</S.classNumberInputText>
-          <S.classNumberInput type="password" placeholder="학번" />
+          <S.classNumberInput  placeholder="학번" />
 
-          <S.nextButton onClick={nextSigin}>
+          <S.nextButton onClick={goMain}>
             <S.nextButtonText>다음</S.nextButtonText>
           </S.nextButton>
         </S.sigininWhite>

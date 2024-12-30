@@ -1,7 +1,16 @@
 import styled from "styled-components";
 
 
-export const ImageSettion = styled.div``;
+export const ImageSettion = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const Logo = styled.img`
 position:absolute;
@@ -11,26 +20,21 @@ top:20px;
 
 export const Background = styled.img`
 display: flex;
-align-items: center;
-justify-content: center;
 height: 100vh;  // 화면 전체 높이
 width: 100vw;   // 화면 전체 너비
-position: relative;
+position: absolute;
 z-index:-1;
 `;
 
 export const LoginWhite=styled.div`
 width: 400px;
 height: 340px;
-left: 560px;
-top: 200px;
 background-color:#ffff;
 border-radius:15px;
-position: absolute;
 display: flex;
-flex-direction: column;
+justify-content:center;
 align-items: center;
-justify-content: center;
+flex-direction: column;
 `
 
 export const LoginWhiteText=styled.span`
@@ -45,19 +49,20 @@ display:flex
 
 export const EmailInput=styled.input`
 width: 304px;
-height: 44px;
+height: 24px;
 left: 608px;
 top: 337px;
 background-color: #f4f4f4;
 color: #000000;
 border-radius: 8px;
 padding:10px;
-outline: none
+outline: none;
+border:none;  
 `
 
 export const PasswordInput=styled.input`
 width: 304px;
-height: 44px;
+height: 24px;
 left: 608px;
 top: 337px;
 background-color: #f4f4f4;
@@ -66,13 +71,13 @@ border-radius: 8px;
 top:-20px;
 padding:10px;
 margin-top: 20px;
-outline: none
+border:none;
 `
 
 export const LoginButton=styled.div`
 width: 96px;
 height: 48px;
-margin-top:40px;
+margin-top:20px;
 background-color: #003C82;
 border-radius:18px;
 display: flex;

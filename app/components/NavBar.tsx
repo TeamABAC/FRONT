@@ -29,6 +29,10 @@ function NavBar() {
     router.push('/MygunheList')
   }
 
+  function LogOut() {
+    router.push('/Login');
+  }
+
   return (
     <>
       <S.NavTmfdiv>
@@ -39,9 +43,9 @@ function NavBar() {
           <S.NavTexts onClick={goToEveryData}>건의 게시판 </S.NavTexts>
           <S.NavTexts  onClick={gotoCheckgunhe}>나의 건의</S.NavTexts>
           <S.NavTexts onClick={goToMyPage}>마이페이지</S.NavTexts>  
-        </S.NavText>
+        </S.NavText >
 
-        <S.NavLogOut>
+        <S.NavLogOut onClick={LogOut}>
           <S.NavLogOutText>로그아웃</S.NavLogOutText>
         </S.NavLogOut>
       </S.NavTmfdiv>

@@ -188,12 +188,21 @@ import styled from "styled-components";
   export const contentArea = styled.textarea`
   resize: none;
   `
+  export const Texte = styled.span`
+  color: #000;
+  position: relative;
+  left: 50px;
+  white-space: normal;
+  `;
 
-  export const Texte=styled.span`
-  color:#000;
-  position:relative;
-  left:50px;
+  export const Texte2=styled.span`
+   color: #000;
+  position: relative;
+  left: 50px;
+  white-space: normal;
+  top:20px;
   `
+
   
   export const Checkbutton=styled.button`
   flex-direction: row;
