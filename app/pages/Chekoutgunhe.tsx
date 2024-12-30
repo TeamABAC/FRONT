@@ -1,13 +1,12 @@
-"use client";
+'use client';
+
 import React from 'react';
 import NavBar from '../components/NavBar';
 import * as S from "../styles/Chekoutgunhe";
-import GlobalStyle from '../components/GlobalStyle';
 
 function App() {
   return (
     <>
-      <GlobalStyle />
       <NavBar />
       <S.Background>
         <S.Mygunheimporm>나의 건의 목록</S.Mygunheimporm>

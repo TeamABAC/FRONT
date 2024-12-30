@@ -62,12 +62,12 @@ left: ${({ absoluteLeft }) => absoluteLeft};
 `
 
 export const DDiv = styled.div`
-    width: 900px;
-    height: 60px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px;
+width: 900px;
+height: 60px;
+border-top: none;
+border-left: none;
+border-right: none;
+border-bottom: 1px;
 `
 export const Sample = styled.div`
   display: grid;
@@ -76,14 +76,14 @@ export const Sample = styled.div`
   align-items: center; 
   width: 100%;  
   position: relative;
-  right: 430px;
+  right: -30px;
   bottom: 120px;
   cursor:pointer;
 
   `;
   
   
-  interface SampleTextProps{
+  interface Td{
       absoluteLeft: string;
 }
 

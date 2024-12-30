@@ -69,7 +69,7 @@ import styled from "styled-components";
   border: 1px solid #000;
   padding: 16px; 
   background-color: #ffffff; 
-  width: 1049px; 
+  width: 1015px; 
   height:81px;
   display:flex;
   align-items: center;

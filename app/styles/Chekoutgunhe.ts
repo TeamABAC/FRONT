@@ -113,7 +113,7 @@ export const Icons=styled.div`
 display: flex;
 align-items: center;
 gap:10px;
-margin-left:120px;
+margin-left:80px;
 margin-top:260px;  
 `
 
@@ -132,8 +132,8 @@ line-height: 19px;
 text-align: center;
 color: #000000;
 position:relative;
-left:12px;
-top:30px;
+right:45px;
+top:40px;
 `
 export const Serch=styled.div`
 
@@ -152,8 +152,8 @@ line-height: 19px;
 text-align: center;
 color: #000000;
 position:relative;
-left:22px;
-top:30px;
+right:45px;
+top:40px;
 `
 
 export const Check=styled.div`
@@ -173,8 +173,8 @@ line-height: 19px;
 text-align: center;
 color: #000000;
 position:relative;
-left:2px;
-top:30px;
+right:45px;
+top:40px;
 `
 
 export const Run=styled.div`
@@ -192,8 +192,8 @@ line-height: 19px;
 text-align: center;
 color: #000000;
 position:relative;
-left:2px;
-top:22px;
+right:45px;
+top:40px;
 `
 
 export const Dasi=styled.div`

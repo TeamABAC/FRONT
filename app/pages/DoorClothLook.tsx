@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation'; // useRouter를 import합니다.
@@ -17,14 +17,22 @@ function Seegunhe() {
   const [noticeTitle, setNoticeTitle] = useState('');
   const [noticeBody, setNoticeBody] = useState('');
   const [savedNotices, setSavedNotices] = useState<SavedNotice[]>([]);
+  const [isClient, setIsClient] = useState(false); // 클라이언트 확인 상태 추가
 
   const router = useRouter(); // useRouter 훅을 사용하여 라우터를 가져옵니다.
 
+  // 클라이언트 환경 확인
+  useEffect(() => {
+    setIsClient(true); // 클라이언트 환경에서만 실행
+  }, []);
+
   // 로컬 스토리지에서 공지사항을 가져옴
   useEffect(() => {
-    const noticeData = JSON.parse(localStorage.getItem('notices') || '[]');
-    setSavedNotices(noticeData);
-  }, []);
+    if (isClient) {
+      const noticeData = JSON.parse(localStorage.getItem('notices') || '[]');
+      setSavedNotices(noticeData);
+    }
+  }, [isClient]); // 클라이언트 상태가 변경되면 실행
 
   // 외부 클릭 감지
   useEffect(() => {
@@ -51,7 +59,9 @@ function Seegunhe() {
     };
 
     const updatedNotices = [noticeData, ...savedNotices];
-    localStorage.setItem('notices', JSON.stringify(updatedNotices));
+    if (isClient) {
+      localStorage.setItem('notices', JSON.stringify(updatedNotices));
+    }
 
     setSavedNotices(updatedNotices);
     setNoticeTitle('');
@@ -61,7 +71,12 @@ function Seegunhe() {
 
   // 'Checkgunhe' 페이지로 이동하는 함수
   function gotoCheckgunhe() {
-    router.push('/Checkoutgunhe'); // '/Checkgunhe'로 라우팅
+    router.push('/Chekoutgunhe'); // '/Checkgunhe'로 라우팅
+  }
+
+  // 클라이언트가 아니면 로딩 상태를 반환
+  if (!isClient) {
+    return <div>로딩 중...</div>;
   }
 
   return (
@@ -74,10 +89,10 @@ function Seegunhe() {
         </S.Option>
         <S.Contenthap>
           <S.ContentUp>
-            <S.Texte>박서현 | 24.08.02 21:45</S.Texte>
+            <S.Texte>밥 먹는중에 이상한것이 나왔어요</S.Texte>
           </S.ContentUp>
           <S.Content>
-            <S.Texte>밥먹는중에 이상한것이 나왔어요</S.Texte>
+            <S.Texte>12월 30일에 밥먹는 중에 벌레가 나왔어요</S.Texte>
           </S.Content>
         </S.Contenthap>
         <S.Goodbutton>
