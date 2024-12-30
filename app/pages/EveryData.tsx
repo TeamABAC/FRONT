@@ -1,5 +1,3 @@
-"use client";
-
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import NavBar from '../components/NavBar';
@@ -7,7 +5,6 @@ import * as S from '../styles/EveryData';
 
 function EveryData() {
     const router = useRouter();
-
 
     function MygunhelistOnclick()
     {
@@ -20,7 +17,9 @@ function EveryData() {
     }
 
 
- return (
+
+  return (
+
     <>
     <NavBar />
     <S.grayBackground>
@@ -29,7 +28,7 @@ function EveryData() {
         <S.listTop>
           <S.listTopText absoluteLeft='40px'>번호</S.listTopText>
           <S.listTopText absoluteLeft='170px'>신청일</S.listTopText>
-          <S.listTopText absoluteLeft='380px'>건의 제목</S.listTopText>
+          <S.listTopText absoluteLeft='g380px'>건의 제목</S.listTopText>
           <S.listTopText absoluteLeft='600px'>건의 유형</S.listTopText>
           <S.listTopText absoluteLeft='780px'>건의 상태</S.listTopText>
         </S.listTop>

@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import Main from './pages/Main';
 import Mypage from './pages/MypaPassword'
 import Seegunhe from './pages/DoorClothLook';
