@@ -14,17 +14,25 @@ function Main() {
   const [noticeTitle, setNoticeTitle] = useState('');
   const [noticeBody, setNoticeBody] = useState('');
   const [savedNotices, setSavedNotices] = useState<savedNotice[]>([]);
+  const [isClient, setIsClient] = useState(false); // 클라이언트 확인 상태 추가
 
   interface savedNotice {
     title: string;
     body: string;
   }
 
+  // 클라이언트 환경에서만 실행
   useEffect(() => {
-    // 컴포넌트가 마운트될 때 로컬 스토리지에서 공지사항을 가져옴
-    const noticeData = JSON.parse(localStorage.getItem('notices')) || [];
-    setSavedNotices(noticeData);
+    setIsClient(true); // 클라이언트 환경에서만 실행
   }, []);
+
+  // 로컬 스토리지에서 공지사항을 가져옴 (클라이언트에서만 실행)
+  useEffect(() => {
+    if (isClient) {
+      const noticeData = JSON.parse(localStorage.getItem('notices') || '[]');
+      setSavedNotices(noticeData);
+    }
+  }, [isClient]); // isClient가 true일 때 실행
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -40,24 +48,25 @@ function Main() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [noticeShow]);
   
-// 공지 작성 제출 함수
-function handleSubmit() {
-  const noticeData: savedNotice = {
+  // 공지 작성 제출 함수
+  function handleSubmit() {
+    const noticeData: savedNotice = {
       title: noticeTitle,
       body: noticeBody,
-  };
+    };
 
-  // 새로운 공지사항을 배열의 맨 앞에 추가
-  const updatedNotices = [noticeData, ...savedNotices];
-  localStorage.setItem('notices', JSON.stringify(updatedNotices));
+    // 새로운 공지사항을 배열의 맨 앞에 추가
+    const updatedNotices = [noticeData, ...savedNotices];
+    if (isClient) {
+      localStorage.setItem('notices', JSON.stringify(updatedNotices));
+    }
 
-  // 상태 초기화
-  setSavedNotices(updatedNotices); // 저장된 공지사항 상태 업데이트
-  setNoticeTitle('');
-  setNoticeBody('');
-  setNoticeShow(false);
-}
-
+    // 상태 초기화
+    setSavedNotices(updatedNotices); // 저장된 공지사항 상태 업데이트
+    setNoticeTitle('');
+    setNoticeBody('');
+    setNoticeShow(false);
+  }
 
   function gotoDoor1() {
     if (!noticeShow) router.push('/DoorCloth1');
@@ -71,13 +80,17 @@ function handleSubmit() {
     if (!noticeShow) router.push('/EveryData');
   }
   
-  
   function goToResultGunhe(){
     if (!noticeShow) router.push('/MygunheList');
-    
   }
+
   function toggleNotice() {
     setNoticeShow(!noticeShow);
+  }
+
+  // 클라이언트 환경이 아니면 로딩 화면을 표시
+  if (!isClient) {
+    return <div>로딩 중...</div>;
   }
 
   return (
@@ -125,6 +138,7 @@ function handleSubmit() {
                 <S.SavedNoticeBody>{notice.body}</S.SavedNoticeBody>
               </S.SavedNoticeDiv>
           ))}
+
         </S.NoticeTmfDiv>
 
         <S.MainBodyBlueStick />

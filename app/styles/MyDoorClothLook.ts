@@ -48,32 +48,41 @@ import styled from "styled-components";
   color: #FFFFFF;
   `
 
-  export const Contenthap=styled.div`
+  export const Hap=styled.div`
   position:absolute;
   left:230px;  
   top:140px;
   `
 
-  export const ContentUp=styled.div`
+  export const DivUp=styled.div`
   border: 1px solid #000;
   padding: 16px; 
   background-color: #ffffff; 
-  width: 1049px; 
+  width: 1016px; 
   height:81px;
   display:flex;
+  bottom:50px;
+  position:relative;
   align-items: center;
   `
 
-  export const Content = styled.textarea`
-  background-color: #ffffff; /* 더 명확한 색상 코드 사용 */
+  export const Text=styled.span`
+  color:#000;
+  padding:20px;
+  `
+
+  export const Content = styled.div`
+  background-color: #ffffff; 
   width: 1049px;
   height: 420px;
   resize: none;
-  color: #000000; /* 잘못된 속성 제거 */
+  color: #000000;
+  position:relative;
+  top:-50px;
   border: solid 1px #000000;
-  outline: none; /* 포커스 시 검정 테두리 제거 */
-  padding: 10px; /* 텍스트와 테두리 간 여백 추가 */
-  box-sizing: border-box; /* 테두리 포함한 크기 조정 */
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
   `;
 
   export const DeleteButton=styled.button`
@@ -84,6 +93,7 @@ import styled from "styled-components";
   border-radius: 3px;
   position:relative;
   left:840px;
+  z-index:1;
   `
 
   export const DeleteButtonText=styled.span`
@@ -123,7 +133,7 @@ import styled from "styled-components";
   position: absolute;
   width: 150px;
   height: 48px;
-  left: 580px;
+  left: 640px;
   top: 700px;
   border-color:#0171ED;
   border-style:solid;
