@@ -20,7 +20,7 @@ function Signin() {
         <S.sigininWhite>
           <S.siginWhiteText>회원가입</S.siginWhiteText>
 
-          <S.EmailInputText>이메일</S.EmailInputText>
+          <S.EmailInputText>이름</S.EmailInputText>
           <S.EmailInput type="email" placeholder="이메일"/>
           <S.classNumberInputText>학번</S.classNumberInputText>
           <S.classNumberInput type="password" placeholder="학번" />
