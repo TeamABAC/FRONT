@@ -8,7 +8,7 @@ function Signin() {
   const router = useRouter(); 
 
   function nextSigin() {
-    router.push('/Sigin2');
+    router.push('/Main');
   }
 
   return (
@@ -26,7 +26,7 @@ function Signin() {
           <S.classNumberInput type="password" placeholder="학번" />
 
           <S.nextButton onClick={nextSigin}>
-            <S.nextButtonText>다음</S.nextButtonText>
+            <S.nextButtonText>확인</S.nextButtonText>
           </S.nextButton>
         </S.sigininWhite>
       </S.allDiv>
