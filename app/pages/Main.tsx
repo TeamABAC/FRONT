@@ -87,7 +87,6 @@ function Main() {
   function toggleNotice() {
     setNoticeShow(!noticeShow);
   }
-
   // 클라이언트 환경이 아니면 로딩 화면을 표시
   if (!isClient) {
     return <div>로딩 중...</div>;

@@ -89,10 +89,10 @@ function Seegunhe() {
         </S.Option>
         <S.Contenthap>
           <S.ContentUp>
-            <S.Texte>밥 먹는중에 이상한것이 나왔어요</S.Texte>
+            <S.Texte>박**  | 2024.12.30 급식에 이상한것이 나왔어요</S.Texte>
           </S.ContentUp>
           <S.Content>
-            <S.Texte>12월 30일에 밥먹는 중에 벌레가 나왔어요</S.Texte>
+            <S.Texte2>12월 30일에 밥먹는 중에 벌레가 나왔어요</S.Texte2>
           </S.Content>
         </S.Contenthap>
         <S.Goodbutton>

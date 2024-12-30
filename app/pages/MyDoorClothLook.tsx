@@ -26,7 +26,7 @@ function MyDoorClothLook() {
 
         <S.Hap>
           <S.DivUp>
-            <S.Text>의자가 고장이 났어요</S.Text>
+            <S.Text>유**  | 2024.12.29 의자가 고장이 났어요</S.Text>
           </S.DivUp>
             <S.Content>
               <S.Text>12월 29일 3층 홈베 의자가 고장이 났어요</S.Text>

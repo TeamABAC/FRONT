@@ -53,6 +53,7 @@ function Login() {
         <S.LoginWhite>
           <S.LoginWhiteText>로그인</S.LoginWhiteText>
 
+
           <S.EmailInput placeholder="이메일" />
           <S.PasswordInput placeholder="비밀번호" />
 

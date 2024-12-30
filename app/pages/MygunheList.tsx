@@ -25,8 +25,8 @@ function MygunheList() {
           </S.listTop>
           <S.Sample onClick={handleOnclick}>
             <S.Td absoluteLeft= '50px'>24.08.02 21:45 </S.Td>
-            <S.Td absoluteLeft='210px'>의자가 고장이 났어요</S.Td>
-            <S.Td absoluteLeft='430px'>시설관리</S.Td>
+            <S.Td absoluteLeft='210px'>급식에 이상한것이나왔어요</S.Td>
+            <S.Td absoluteLeft='430px'>급식</S.Td>
             <S.Td absoluteLeft='650px'>김홍준</S.Td>
             <S.Td absoluteLeft='830px'>검토중</S.Td>
           </S.Sample>
