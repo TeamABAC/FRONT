@@ -100,3 +100,4 @@ README.md
 next.config.ts
 next.config.mjs
 postcss.config.mjs
+.env.local
