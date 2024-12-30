@@ -7,8 +7,6 @@ import RadioCheck from '../components/RadioCheck';
 import * as S from '../styles/DoorCloth1Css';
 import axios from 'axios';
 
-const BASE_URL = 'http://192.168.7.24:5000/'; // URL 받아온거 설정
-
 function DoorCloth1() {
   const router = useRouter();
   const [data, setData] = useState<{ key: string; value: any }[]>([]);
@@ -22,20 +20,6 @@ function DoorCloth1() {
     ];
     setData(updatedData);
   }
-  
-  const fetchData = async () => { // 서버와 통신이 되고 있는지  확인하는거거
-    try {
-      const response = await axios.get(BASE_URL);
-      console.log('응답 데이터:', response.data);
-    } catch (error) { // 에러가 발생하면 무조건 실행 그냥 어떠한 에러든 전부 캐치
-      console.error('GET 요청 실패:', error);
-    }
-  };
-
-  const publicValue = async () => {
-    const publicKey = axios.post(BASE_URL, {});
-  }
-
   // 다음 페이지로 이동
   function goToDoor2Page() {
     if (data.some(item => item.key === 'isPublic')) {
@@ -45,7 +29,6 @@ function DoorCloth1() {
     }
   }
 
-fetchData();
   return (
     <>
       <NavBar /> {/* 네비게이션 바 컴포넌트 */}
@@ -103,19 +86,14 @@ fetchData();
 
           <S.agreeCheckSpan>개인정보 수집 및 이용 동의 여부</S.agreeCheckSpan>
           <S.AgreeCheckDiv $Agreetop='650px' $Agreeleft='700px'>
-            <RadioCheck radioLabelText='동의' disradioLabelText='비동의' name='agree' onChange={handlePublic}></RadioCheck>
+            <RadioCheck radioLabelText='동의' disradioLabelText='비동의' name='agree' onChange={handlePublic} value='agree'></RadioCheck>
           </S.AgreeCheckDiv>
 
           <S.DivideLine top='730px'></S.DivideLine>
 
           <S.publicTextSpan>건의 공개 여부</S.publicTextSpan>
           <S.AgreeCheckDiv $Agreetop="760px" $Agreeleft="700px">
-            <RadioCheck
-              radioLabelText="공개"
-              disradioLabelText="비공개"
-              name="visibility"
-              onChange={handlePublic}
-            />
+            <RadioCheck radioLabelText="공개" disradioLabelText="비공개" name="visibility" onChange={handlePublic} value='private'/>
           </S.AgreeCheckDiv>
 
           <S.Checkbutton onClick={goToDoor2Page}>
