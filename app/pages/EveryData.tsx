@@ -6,7 +6,20 @@ import * as S from '../styles/EveryData';
 function EveryData() {
     const router = useRouter();
 
+    function MygunhelistOnclick()
+    {
+    router.push('MyDoorClothLook');
+    
+    }
+    function DoorClothLookOnclick()
+    {
+      router.push('DoorClothLook');
+    }
+
+
+
   return (
+
     <>
     <NavBar />
     <S.grayBackground>

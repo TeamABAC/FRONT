@@ -5,22 +5,25 @@ import { useRouter } from 'next/router';
 import NavBar from '../components/NavBar';
 import * as S from '../styles/MyDoorClothLook';
 
+interface SavedNotice {
+  title: string;
+  body: string;
+}
+
 function MyDoorClothLook() {
   const [noticeShow, setNoticeShow] = useState(false);
   const noticeRef = useRef<HTMLDivElement | null>(null);
 
   const [noticeTitle, setNoticeTitle] = useState('');
   const [noticeBody, setNoticeBody] = useState('');
-  const [savedNotices, setSavedNotices] = useState<savedNotice[]>([]);
+  const [savedNotices, setSavedNotices] = useState<SavedNotice[]>([]);
+  const [isClient, setIsClient] = useState(false);
 
   const router = useRouter();
 
-  interface savedNotice {
-    title: string;
-    body: string;
-  }
-
   useEffect(() => {
+    // 클라이언트 환경 확인
+    setIsClient(true);
     if (typeof window !== 'undefined') {
       const noticeData = JSON.parse(localStorage.getItem('notices') || '[]');
       setSavedNotices(noticeData);
@@ -44,7 +47,7 @@ function MyDoorClothLook() {
   }, [noticeShow]);
 
   function handleSubmit() {
-    const noticeData: savedNotice = { title: noticeTitle, body: noticeBody };
+    const noticeData: SavedNotice = { title: noticeTitle, body: noticeBody };
 
     const updatedNotices = [noticeData, ...savedNotices];
     localStorage.setItem('notices', JSON.stringify(updatedNotices));
@@ -67,6 +70,11 @@ function MyDoorClothLook() {
 
   function gotoResult() {
     router.push('/Checkoutgunhe');
+  }
+
+  // 클라이언트가 아니면 로딩 상태를 반환
+  if (!isClient) {
+    return <div>로딩 중...</div>;
   }
 
   return (

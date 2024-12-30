@@ -73,7 +73,7 @@ function handleSubmit() {
   
   
   function goToResultGunhe(){
-    if (!noticeShow) router.push('/ResultGunhe');
+    if (!noticeShow) router.push('/MygunheList');
     
   }
   function toggleNotice() {

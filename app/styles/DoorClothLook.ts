@@ -54,17 +54,16 @@ import styled from "styled-components";
   top:140px;
   `
 
-  export const Content = styled.textarea`
+  export const Content = styled.div`
   background-color: #ffffff; /* 더 명확한 색상 코드 사용 */
   width: 1049px;
   height: 420px;
-  resize: none;
-  color: #000000; /* 잘못된 속성 제거 */
+  resize: none; /* div에는 적용되지 않는 속성이므로 제거 */
   border: solid 1px #000000;
   outline: none; /* 포커스 시 검정 테두리 제거 */
   padding: 10px; /* 텍스트와 테두리 간 여백 추가 */
   box-sizing: border-box; /* 테두리 포함한 크기 조정 */
-  `;
+`;
 
   export const ContentUp=styled.div`
   border: 1px solid #000;
@@ -85,7 +84,7 @@ import styled from "styled-components";
   position: absolute;
   width: 150px;
   height: 48px;
-  left: calc(50% - 140px/2);
+  left: 600px;
   top: 700px;
   border-color:#0171ED;
   border-style:solid;
@@ -195,3 +194,39 @@ import styled from "styled-components";
   position:relative;
   left:50px;
   `
+  
+  export const Checkbutton=styled.button`
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  position: absolute;
+  width: 150px;
+  height: 48px;
+  left: 800px;
+  top: 700px;
+  border-color:#0171ED;
+  border-style:solid;
+  border-width:2px;
+  border-radius:16px;
+  justify-content:center;
+  align-items:center;
+  `
+
+  export const CheckImage=styled.img`
+  width:20px;
+  height:20px;
+  `
+
+  export const CheckText=styled.span`
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 17px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+  color: #000000;`
