@@ -9,7 +9,7 @@ function MygunheList() {
 
     function handleOnclick()
     {
-        router.push('/MyDoorClothLook');
+        router.push('/DoorClothLook');
     }
   return (
     <>
