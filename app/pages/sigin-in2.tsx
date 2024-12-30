@@ -1,31 +1,37 @@
 'use client'
-import React from 'react'
-import * as S from '../styles/singin-in2'
-import { useRouter } from "next/navigation";
 
-function sigin() {
+import React from 'react';
+import * as S from '../styles/signin-in';
+import { useRouter } from 'next/navigation';
+
+function Signin() {
+  const router = useRouter(); 
+
+  function nextSigin() {
+    router.push('/Sigin2');
+  }
+
   return (
-    <div>
-      <S.ImageSettion> 
-      <S.Logo src="/logowhite.png" alt="로고" />
-      <S.LoginWhite>
-          <S.LoginWhiteText>회원가입</S.LoginWhiteText>
-      <S.EmailInput placeholder=' 이름'></S.EmailInput>
-      <S.EmailInputText>이메일</S.EmailInputText>
-      <S.PasswordInput placeholder=' 학번'></S.PasswordInput>
-      <S.PasswordInputText>비밀번호</S.PasswordInputText>
-      
-      <S.LoginButton>
-        <S.LoginButtonText>확인</S.LoginButtonText>
-      </S.LoginButton>
-      
-      </S.LoginWhite>
-      
-      <S.Background src='/background2.png' alt="배경">
-      </S.Background>
-      </S.ImageSettion>
-    </div>
-  )
+    <>
+      <S.allDiv>
+        <S.Logo src="/logowhite.png" alt="로고" />
+        <S.Background src="/background2.png" alt="배경" />
+
+        <S.sigininWhite>
+          <S.siginWhiteText>회원가입</S.siginWhiteText>
+
+          <S.EmailInputText>이메일</S.EmailInputText>
+          <S.EmailInput type="email" placeholder="이메일"/>
+          <S.classNumberInputText>학번</S.classNumberInputText>
+          <S.classNumberInput type="password" placeholder="학번" />
+
+          <S.nextButton onClick={nextSigin}>
+            <S.nextButtonText>다음</S.nextButtonText>
+          </S.nextButton>
+        </S.sigininWhite>
+      </S.allDiv>
+    </>
+  );
 }
 
-export default sigin;
+export default Signin;
