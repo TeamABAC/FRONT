@@ -23,6 +23,8 @@ display: flex;
 height: 100vh;  // 화면 전체 높이
 width: 100vw;   // 화면 전체 너비
 position: absolute;
+left: 0px;
+top: 0px;
 z-index:-1;
 `;
 
@@ -35,6 +37,7 @@ display: flex;
 justify-content:center;
 align-items: center;
 flex-direction: column;
+position: relative;
 `
 
 export const LoginWhiteText=styled.span`
@@ -107,9 +110,9 @@ line-height: 100%;
 display: flex;
 align-items: center;
 color: #777777;
-position:relative;
-right:50px;
-top:20px;
+position: absolute;
+bottom: 20px;
+left: 120px;
 `
 
 export const LogininText=styled.span`
@@ -121,8 +124,8 @@ line-height: 100%;
 display: flex;
 align-items: center;
 color: #003C82;
-position:relative;
-left:18px;
-top:7px;
+position: absolute;
+bottom: 20px;
+right: 150px;
 cursor:pointer;
 `
