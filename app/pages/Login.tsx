@@ -31,7 +31,7 @@ function Login() {
     try {
       // 로그인 요청
       const response = await axios.post(
-        'https://322f-2001-e60-a017-870d-7967-ae08-f4c-c7de.ngrok-free.app/api/auth/login', // 로그인 엔드포인트
+        'http://192.168.196.24:5000/api/auth/login', // 로그인 엔드포인트
         { email, password }
       );
 
@@ -47,7 +47,7 @@ function Login() {
   };
 
   function gotoSignIn() {
-    router.push('/Sigin-in');
+    router.push('/Main');
   }
 
   return (

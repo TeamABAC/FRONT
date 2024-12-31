@@ -4,7 +4,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import NavBar from "../components/NavBar";
 import * as S from "../styles/ResultGunhe";
-import GlobalStyle from "../components/GlobalStyle";
 
 
 
@@ -61,7 +60,7 @@ function GunheResult() {
 
   return (
     <>
-      <GlobalStyle />
+    
       <NavBar />
       <S.Background>
         <S.Mygunheimporm>나의 건의 목록</S.Mygunheimporm>
