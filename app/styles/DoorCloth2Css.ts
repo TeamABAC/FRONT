@@ -110,6 +110,7 @@ export const DivideBlueLine = styled.div`
   height: 50px;
   position: absolute;
   top: 400px;
+  
   display: flex;
   align-items: center;
   background: #003c82;
@@ -203,6 +204,7 @@ export const TitleInput = styled.input`
   font-weight: 500;
   font-family: 'Pretendard';
   font-style: normal;
+  font-size: 20px;
 `;
 
 export const ContentInput = styled.textarea`
@@ -217,6 +219,7 @@ export const ContentInput = styled.textarea`
   border: 0.2px solid #000000;
   color: black;
   padding: 10px;
+  font-size: 20px;
   font-weight: 700;
   font-family: 'Pretendard';
   font-style: normal;

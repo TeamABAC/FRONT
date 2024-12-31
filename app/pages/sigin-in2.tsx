@@ -1,15 +1,37 @@
-'use client'
+'use client';
 
 import React from 'react';
-import * as S from '../styles/signin-in';
+import * as S from '../styles/singin-in2';
 import { useRouter } from 'next/navigation';
+import { useUser } from '../context/UserContext';
+import axios from 'axios';
 
-function Signin() {
-  const router = useRouter(); 
+function Signin2() {
+  const router = useRouter();
+  const { userData, setUserData } = useUser();
 
-  function nextSigin() {
-    router.push('/Main');
-  }
+  const handleSubmit = async () => {
+    if (!userData.email || !userData.password) {
+      alert('모든 필드를 입력해주세요!');
+      return;
+    }
+
+    try {
+      const response = await axios.post(
+        'https://322f-2001-e60-a017-870d-7967-ae08-f4c-c7de.ngrok-free.app/api/auth/signup',
+        userData // formData 대신 userData 사용
+      );
+      console.log('회원가입 성공:', response.data);
+      router.push('/Main');
+    } catch (error: any) {
+      console.error('회원가입 실패:', {
+        message: error.message,
+        response: error.response?.data,
+        status: error.response?.status,
+      });
+      alert('회원가입 중 오류가 발생했습니다.');
+    }
+  };
 
   return (
     <>
@@ -20,12 +42,24 @@ function Signin() {
         <S.sigininWhite>
           <S.siginWhiteText>회원가입</S.siginWhiteText>
 
-          <S.EmailInputText>이메일</S.EmailInputText>
-          <S.EmailInput type="email" placeholder="이메일"/>
-          <S.classNumberInputText>학번</S.classNumberInputText>
-          <S.classNumberInput type="password" placeholder="학번" />
+          <S.EmailInput
+            type="email"
+            placeholder="이메일"
+            value={userData.email}
+            onChange={(e) =>
+              setUserData({ ...userData, email: e.target.value })
+            }
+          />
+          <S.passwordInput
+            type="password"
+            placeholder="비밀번호"
+            value={userData.password}
+            onChange={(e) =>
+              setUserData({ ...userData, password: e.target.value })
+            }
+          />
 
-          <S.nextButton onClick={nextSigin}>
+          <S.nextButton onClick={handleSubmit}>
             <S.nextButtonText>확인</S.nextButtonText>
           </S.nextButton>
         </S.sigininWhite>
@@ -34,4 +68,4 @@ function Signin() {
   );
 }
 
-export default Signin;
+export default Signin2;

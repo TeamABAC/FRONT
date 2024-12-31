@@ -25,68 +25,51 @@ export const Background = styled.img`
 `;
 export const sigininWhite=styled.div`
     width: 400px;
-    height: 422px;
+    height: 340px;
     background-color:#ffff;
     border-radius:15px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content:center;
+    position: relative;
 `
 export const siginWhiteText=styled.span`
     font-family: 'Pretendard';
     font-weight: 700;
     font-size: 24px;
     color: #000000;
-    margin-top: 20px;
+    position: relative;
+    top: -20px;
 `
-export const EmailInputText=styled.span`
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 17px;
-    color: #000000;
-    margin-left:-280px;
-    margin-top: 40px;
-`
+
 export const EmailInput=styled.input`
-    width: 334px;
-    height: 20px;
+    width: 334px;   
+    height: 28px;
     background-color: #f4f4f4;
     color: #000000;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 8px;
     padding:10px;
     border: none;
-    margin-top: 10px;
+    margin-top: 4px;
 `
 
-export const classNumberInputText=styled.span`
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 17px;
-    color: #000000;
-    margin-left:-270px;
-    margin-top: 20px;
-`
-
-export const classNumberInput=styled.input`
+export const passwordInput = styled.input`
     width: 334px;
-    height: 20px;
-    margin-top: 10px;
+    height: 28px;
+    margin-top: 30px;
     background-color: #f4f4f4;
     color: #000000;
     border-radius: 8px;
     padding:10px;
     border: none;
-    font-size: 18px;
+    font-size: 16px;
 `
 export const nextButton=styled.div`
-    width: 112px;
-    height: 56px;
-    margin-top:60px;
+    width: 96px;
+    height: 48px;
+    margin-top: 20px;
     background-color: #003C82;
     border-radius:18px;
     display: flex;
