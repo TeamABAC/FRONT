@@ -16,12 +16,7 @@ const ImageUpload: React.FC = () => {
 
   return (
     <S.ImageDiv>
-      <S.FileInput 
-        type='file' 
-        id='file-upload' 
-        accept='image/*' 
-        onChange={handleImageChange} 
-      />
+      <S.FileInput type='file' id='file-upload' accept='image/*' onChange={handleImageChange} />
       <S.FileInputLabel htmlFor='file-upload'>파일 선택</S.FileInputLabel>
       {fileName && <S.FileName>{fileName}</S.FileName>}
     </S.ImageDiv>
