@@ -38,6 +38,7 @@ export const listHeaderDiv = styled.div`
     height: 64px;
     background: #F4F4F4;
     border-bottom: 2px solid #000000;
+    margin-top: 30px;
 `
 
 
