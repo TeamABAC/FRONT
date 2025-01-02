@@ -32,67 +32,12 @@ text-align: center;
 color: #000000;
 `
 
-export const listTop = styled.div`
-position: absolute;
-width: 900px;
-height: 60px;
-background: #F4F4F4;
-border-bottom: 2px solid #000000;
-box-sizing: border-box;
-display:flex;
-align-items: center;
-margin-top: 140px;
+export const listHeaderDiv = styled.div`
+    box-sizing: border-box;
+    width: 900px;
+    height: 64px;
+    background: #F4F4F4;
+    border-bottom: 2px solid #000000;
 `
 
-interface listTopTextProps{
-    absoluteLeft: string;
-}
 
-export const listTopText = styled.span<{absoluteLeft:string}>`
-font-family: 'Pretendard';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 19px;
-text-align: center;
-letter-spacing: -0.005em;
-color: #000000;
-position: absolute;
-left: ${({ absoluteLeft }) => absoluteLeft};
-`
-
-export const DDiv = styled.div`
-width: 900px;
-height: 60px;
-border-top: none;
-border-left: none;
-border-right: none;
-border-bottom: 1px;
-`
-export const Sample = styled.div`
-  display: grid;
-  grid-template-columns: 2fr 3fr 3fr 1fr 1fr; 
-  gap: 100px 40px; 
-  align-items: center; 
-  width: 100%;  
-  position: relative;
-  right: -30px;
-  bottom: 120px;
-  cursor:pointer;
-
-  `;
-  
-  
-  interface Td{
-      absoluteLeft: string;
-}
-
-export const Td = styled.span<{absoluteLeft:string}>`
-position:absolute;
-font-size: 16px;
-width:200px;
-line-height: 1.5;
-color: #000000;
-left: ${({ absoluteLeft }) => absoluteLeft};
-
-`;
