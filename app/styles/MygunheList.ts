@@ -35,10 +35,12 @@ color: #000000;
 export const listHeaderDiv = styled.div`
     box-sizing: border-box;
     width: 900px;
-    height: 64px;
+    height: 48px;
     background: #F4F4F4;
     border-bottom: 2px solid #000000;
-    margin-top: 30px;
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
 `
 
 

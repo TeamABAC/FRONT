@@ -12,7 +12,7 @@ function MygunheList() {
       <S.grayBackground>
         <S.whiteDiv>
           <S.headText>나의 건의 목록</S.headText>
-          <S.listHeaderDiv>sdfss</S.listHeaderDiv>
+          <S.listHeaderDiv></S.listHeaderDiv>
         </S.whiteDiv>
       </S.grayBackground>
     </>
